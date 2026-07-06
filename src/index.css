@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-apricot: #FFF9F2;
+  --color-brand-cream: #FFFDF9;
+  --color-brand-coral: #FF6B6B;
+  --color-brand-turquoise: #4ECDC4;
+  --color-brand-yellow: #FFE66D;
+}
+
+@layer utilities {
+  /* Print utilities */
+  @media print {
+    body {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      font-size: 12pt !important;
+    }
+    
+    .no-print {
+      display: none !important;
+    }
+    
+    .print-only {
+      display: block !important;
+    }
+    
+    .print-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+      border: none !important;
+      background: white !important;
+      page-break-after: always;
+    }
+    
+    /* Ensure background colors print */
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+  }
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFD2A5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B6B;
+}
+
+/* Custom drawing canvas style */
+.canvas-container {
+  touch-action: none;
+}
+

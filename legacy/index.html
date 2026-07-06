@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FF6F5E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Jardin des Vacances">
+  <title>Le Jardin des Vacances 🐌</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <div id="accueil">
+      <header class="entete">
+        <h1>🐌 LE JARDIN DES VACANCES</h1>
+        <p class="sous">MON PROGRAMME DE GRANDE SECTION, JOUR APRÈS JOUR</p>
+      </header>
+
+      <section class="compte" id="compte" aria-live="polite"></section>
+
+      <div class="barre no-print">
+        <button class="btn corail grand" id="btn-aujourdhui" onclick="if(window.__ouvrirAuj)window.__ouvrirAuj()">▶️ MA JOURNÉE D'AUJOURD'HUI</button>
+        <a class="btn vert" href="apercu.html" style="display:inline-flex;align-items:center">👀 TOUTES LES ACTIVITÉS</a>
+        <button class="btn violet" id="btn-cal-print">🖨️ IMPRIMER LE CALENDRIER DE L'ÉTÉ</button>
+      </div>
+
+      <h2 class="section-titre">🗓️ LE CALENDRIER DE L'ÉTÉ</h2>
+      <p class="sous" style="text-align:center">TAPE SUR UN JOUR POUR VOIR SES ACTIVITÉS · TAPE SUR ➕ POUR AJOUTER UN ÉVÉNEMENT</p>
+      <div class="calendrier" id="calendrier"></div>
+
+      <p class="aide-pied">
+        🖨️ À IMPRIMER · 📱 SUR L'ÉCRAN · 🏠 SANS RIEN<br>
+        Fait avec 💛 pour bien s'amuser et grandir cet été.
+      </p>
+    </div>
+
+    <div class="jour-vue" id="jour-vue"></div>
+  </div>
+
+  <!-- Modale (jeux & éditeur) -->
+  <div class="modale" id="modale" role="dialog" aria-modal="true">
+    <div class="modale-inner">
+      <button class="modale-fermer" id="modale-fermer" aria-label="Fermer">✕</button>
+      <div id="modale-corps"></div>
+    </div>
+  </div>
+
+  <!-- Zone réservée à l'impression -->
+  <div class="zone-print" id="zone-print"></div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Raccourci "Ma journée d'aujourd'hui"
+    window.__ouvrirAuj = function () {
+      if (typeof DAYS !== "undefined" && DAYS[TODAY]) ouvrirJour(TODAY);
+      else alert("La journée d'aujourd'hui arrive bientôt !");
+    };
+  </script>
+</body>
+</html>

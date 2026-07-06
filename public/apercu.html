@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#FF6B6B" />
+  <title>Toutes les activités · Le Jardin des Vacances</title>
+  <link rel="icon" href="icon.png" type="image/png" />
+  <style>
+    :root{--creme:#FFFBF5;--corail:#FF6B6B;--corail-f:#E9503F;--turq:#2FBFB3;--turq-f:#1E9C92;
+      --texte:#4A3B2E;--doux:#8A7358;--abricot:#FFE6C7;--ombre:0 8px 22px rgba(120,80,40,.16);}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--creme);color:var(--texte);
+      font-family:"Trebuchet MS","Segoe UI",Verdana,system-ui,sans-serif;padding:14px}
+    .wrap{max-width:1000px;margin:0 auto}
+    h1{text-align:center;color:var(--corail-f);letter-spacing:1px;margin:8px 0 2px;font-size:clamp(1.4rem,5vw,2.2rem)}
+    .sous{text-align:center;color:var(--doux);margin:0 0 14px}
+    .bar{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+    .btn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;border:none;border-radius:999px;
+      padding:11px 18px;font-weight:800;color:#fff;background:var(--turq);box-shadow:var(--ombre);font-size:1rem}
+    .btn.gris{background:#C7B49C}
+    .aide{background:#fff;border-radius:18px;padding:12px 16px;box-shadow:var(--ombre);max-width:760px;margin:0 auto 16px;font-weight:700}
+    .aide b{color:var(--corail-f)}
+    .stats{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 18px}
+    .stat{background:#fff;border-radius:14px;padding:7px 12px;box-shadow:var(--ombre);font-weight:800;font-size:.85rem}
+    .stat b{color:var(--corail-f)}
+    .jour{background:#fff;border-radius:22px;box-shadow:var(--ombre);padding:12px 14px;margin-bottom:12px;border-left:10px solid var(--turq)}
+    .jour.auj{border-left-color:var(--corail);box-shadow:0 0 0 3px rgba(255,107,107,.25),var(--ombre)}
+    .head{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-bottom:8px}
+    .head .date{font-weight:900;font-size:1.05rem}
+    .head .theme{font-weight:800;color:var(--turq-f)}
+    .head .open{margin-left:auto;text-decoration:none;background:var(--corail);color:#fff;font-weight:800;padding:6px 14px;border-radius:999px;font-size:.82rem}
+    .chip{display:flex;align-items:center;gap:8px;background:var(--creme);border-radius:12px;padding:7px 10px;margin-top:6px;font-size:.92rem}
+    .chip .n{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--turq);color:#fff;font-weight:900;font-size:.78rem;display:flex;align-items:center;justify-content:center}
+    .chip .ti{flex:1;font-weight:800}
+    .chip .mode{font-size:.62rem;font-weight:800;padding:2px 8px;border-radius:999px;white-space:nowrap}
+    .m-ecran{background:#EAF9F0;color:#1E9C6B}
+    .m-imp{background:#E8F4FF;color:#2E6FB0}
+    .m-sans{background:#FFF1DC;color:#C77A15}
+    .pied{text-align:center;color:var(--doux);margin:26px 0;font-size:.85rem}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>👀 TOUTES LES ACTIVITÉS</h1>
+    <p class="sous">DE L'ÉTÉ, JOUR PAR JOUR — POUR RELIRE ET SIGNALER CE QUI NE VA PAS</p>
+    <div class="bar"><a class="btn gris" href="index.html">⬅️ LE CALENDRIER</a></div>
+    <div class="aide">💬 Pour signaler un souci, donne la <b>date</b> et le <b>numéro</b> de l'activité
+      (ex : « le 12 juillet, l'activité ③ ne va pas »).</div>
+    <div class="stats" id="stats"></div>
+    <div id="liste"></div>
+    <p class="pied">🖨️ À IMPRIMER · 📱 SUR L'ÉCRAN · 🏠 SANS RIEN</p>
+  </div>
+  <script>
+    const JOURS = ["DIMANCHE","LUNDI","MARDI","MERCREDI","JEUDI","VENDREDI","SAMEDI"];
+    const MOIS = ["JANVIER","FÉVRIER","MARS","AVRIL","MAI","JUIN","JUILLET","AOÛT","SEPTEMBRE","OCTOBRE","NOVEMBRE","DÉCEMBRE"];
+    const EM = {programme:"📅",lecture:"📖",graphisme:"✏️",relier:"🔗",decoupage:"✂️",numeration:"🔢",logique:"🧩",phono:"👂"};
+    function modeCls(m){ if(m.includes("IMPRIMER"))return "m-imp"; if(m.includes("SANS"))return "m-sans"; return "m-ecran"; }
+    function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+    const todayISO=(()=>{const d=new Date();const p=n=>String(n).padStart(2,"0");return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`;})();
+    fetch("days.json").then(r=>r.json()).then(days=>{
+      // days est un tableau
+      const compte={};
+      days.forEach(d=>d.ateliers.forEach(a=>compte[a.type]=(compte[a.type]||0)+1));
+      const total=days.reduce((s,d)=>s+d.ateliers.length,0);
+      document.getElementById("stats").innerHTML =
+        `<div class="stat">📆 <b>${days.length}</b> jours</div>`+
+        `<div class="stat">🧩 <b>${total}</b> activités</div>`+
+        Object.entries(compte).sort((a,b)=>b[1]-a[1]).map(([t,n])=>`<div class="stat">${EM[t]||"•"} <b>${n}</b></div>`).join("");
+      let html="";
+      for(const d of days){
+        const dt=new Date(d.date+"T12:00:00");
+        const auj=d.date===todayISO;
+        const dateTxt=`${JOURS[dt.getDay()]} ${dt.getDate()} ${MOIS[dt.getMonth()]}`;
+        let chips="";
+        d.ateliers.forEach((a,i)=>{
+          chips+=`<div class="chip"><span class="n">${i+1}</span><span style="font-size:1.3rem">${EM[a.type]||"•"}</span>`+
+            `<span class="ti">${esc(a.titre)}</span><span class="mode ${modeCls(a.mode)}">${esc(a.mode)}</span></div>`;
+        });
+        html+=`<div class="jour ${auj?"auj":""}" id="${d.date}">
+          <div class="head"><span class="date">${auj?"⭐ ":""}${dateTxt}</span>
+          <span class="theme">${d.themeEmoji} ${esc(d.themeNom)}</span>
+          <a class="open" href="index.html">OUVRIR ▶</a></div>${chips}</div>`;
+      }
+      document.getElementById("liste").innerHTML=html;
+      const h=location.hash.replace(/^#/,""); if(h&&document.getElementById(h))document.getElementById(h).scrollIntoView();
+    }).catch(e=>{document.getElementById("liste").innerHTML="<p style='text-align:center'>Impossible de charger days.json</p>";});
+  </script>
+</body>
+</html>

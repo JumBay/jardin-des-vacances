@@ -1,0 +1,18 @@
+{
+  "short_name": "Vacances GS",
+  "name": "Le Jardin des Vacances - Grande Section",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "scope": ".",
+  "background_color": "#FFFBF5",
+  "theme_color": "#FF6B6B",
+  "display": "standalone",
+  "orientation": "portrait"
+}
