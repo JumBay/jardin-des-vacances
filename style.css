@@ -1,0 +1,422 @@
+/* ============================================================
+   LE JARDIN DES VACANCES — Style
+   Fond crème/abricot, accents corail / turquoise / jaune.
+   Grosses zones tactiles, coins arrondis, ombres douces.
+   ============================================================ */
+
+:root {
+  --creme: #FFF6E9;
+  --abricot: #FFE6C7;
+  --abricot-fonce: #FFD3A3;
+  --corail: #FF6F5E;
+  --corail-fonce: #E9503F;
+  --turquoise: #2FBFB3;
+  --turquoise-fonce: #1E9C92;
+  --jaune: #FFC542;
+  --violet: #8E6FD8;
+  --vert: #7FB03C;
+  --texte: #4A3B2E;
+  --texte-doux: #8A7358;
+  --ombre: 0 8px 22px rgba(120, 80, 40, 0.16);
+  --ombre-forte: 0 12px 30px rgba(120, 80, 40, 0.28);
+  --rayon: 26px;
+  --rayon-s: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--creme);
+  color: var(--texte);
+  font-family: "Trebuchet MS", "Segoe UI", "Verdana", system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  overscroll-behavior-y: contain;
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255,197,66,0.18), transparent 42%),
+    radial-gradient(circle at 88% 4%, rgba(47,191,179,0.16), transparent 40%),
+    var(--creme);
+  min-height: 100vh;
+}
+
+button { font-family: inherit; cursor: pointer; }
+
+.app { max-width: 1180px; margin: 0 auto; padding: 14px 14px 60px; }
+
+/* ---------- En-tête / compte à rebours ---------- */
+.entete {
+  text-align: center;
+  padding: 18px 16px 8px;
+}
+.entete h1 {
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  margin: 0 0 4px;
+  letter-spacing: 1px;
+  color: var(--corail-fonce);
+  text-shadow: 0 2px 0 #fff;
+}
+.entete .sous { color: var(--texte-doux); font-size: 1rem; margin: 0 0 14px; }
+
+.compte {
+  background: linear-gradient(135deg, var(--corail), var(--jaune));
+  color: #fff;
+  border-radius: var(--rayon);
+  padding: 18px 20px;
+  box-shadow: var(--ombre);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 24px;
+  margin-bottom: 12px;
+}
+.compte .jrs { font-size: clamp(2rem, 9vw, 3.4rem); font-weight: 900; line-height: 1; text-shadow: 0 3px 0 rgba(0,0,0,0.12); }
+.compte .lbl { font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.compte .phrase { width: 100%; text-align: center; font-size: 1rem; opacity: .95; }
+.jauge { width: 100%; display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; margin-top: 6px; }
+.jauge span { font-size: 1.1rem; filter: grayscale(0); }
+.jauge span.vide { opacity: .28; filter: grayscale(1); }
+
+/* ---------- Barre de boutons ---------- */
+.barre { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 6px 0 18px; }
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  background: var(--turquoise);
+  box-shadow: var(--ombre);
+  transition: transform .12s ease, box-shadow .12s ease;
+  min-height: 52px;
+}
+.btn:active { transform: translateY(2px) scale(.98); box-shadow: var(--ombre-forte); }
+.btn.corail { background: var(--corail); }
+.btn.jaune { background: var(--jaune); color: var(--texte); }
+.btn.violet { background: var(--violet); }
+.btn.vert { background: var(--vert); }
+.btn.gris { background: #C7B49C; color: #fff; }
+.btn.grand { font-size: 1.15rem; padding: 16px 26px; }
+
+/* ---------- Section titre ---------- */
+.section-titre {
+  text-align: center;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  color: var(--turquoise-fonce);
+  margin: 22px 0 12px;
+  letter-spacing: 1px;
+}
+
+/* ---------- Calendrier ---------- */
+.mois { margin-bottom: 26px; }
+.mois h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--corail-fonce);
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.grille {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+.jour-nom {
+  text-align: center;
+  font-weight: 800;
+  color: var(--texte-doux);
+  font-size: .8rem;
+  padding: 4px 0;
+  text-transform: uppercase;
+}
+.case {
+  position: relative;
+  background: #fff;
+  border-radius: var(--rayon-s);
+  min-height: 96px;
+  padding: 6px 6px 4px;
+  box-shadow: 0 4px 10px rgba(120,80,40,0.10);
+  border: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: transform .1s ease;
+  overflow: hidden;
+}
+.case.vide { background: transparent; box-shadow: none; }
+.case.jour { cursor: pointer; }
+.case.jour:active { transform: scale(.97); }
+.case .num { font-size: 1.35rem; font-weight: 900; color: var(--texte); line-height: 1; }
+.case .dow { font-size: .62rem; color: var(--texte-doux); text-transform: uppercase; font-weight: 700; margin-top: -2px; }
+.case .evts { display: flex; flex-direction: column; gap: 2px; margin-top: auto; }
+.case .evt {
+  background: var(--abricot);
+  border-radius: 8px;
+  padding: 2px 5px;
+  font-size: .64rem;
+  font-weight: 800;
+  color: var(--texte);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.case .evt .em { font-size: .85rem; }
+.case.passe { opacity: .5; background: #F1E7D8; }
+.case.passe .num { text-decoration: line-through; color: var(--texte-doux); }
+.case.aujourdhui {
+  border-color: var(--corail);
+  background: #FFF;
+  box-shadow: 0 0 0 4px rgba(255,111,94,0.25), var(--ombre-forte);
+  animation: halo 2.2s ease-in-out infinite;
+}
+@keyframes halo {
+  0%,100% { box-shadow: 0 0 0 4px rgba(255,111,94,0.25), var(--ombre); }
+  50% { box-shadow: 0 0 0 8px rgba(255,111,94,0.12), var(--ombre-forte); }
+}
+.case .plus {
+  position: absolute; top: 4px; right: 4px;
+  width: 24px; height: 24px; border-radius: 50%;
+  border: none; background: var(--turquoise); color: #fff;
+  font-size: 1.1rem; font-weight: 900; line-height: 22px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2); opacity: .55;
+}
+.case:hover .plus { opacity: 1; }
+
+/* ---------- Vue du jour ---------- */
+.jour-vue { display: none; }
+.jour-vue.actif { display: block; }
+.jour-entete {
+  background: linear-gradient(135deg, var(--abricot), var(--abricot-fonce));
+  border-radius: var(--rayon);
+  padding: 18px;
+  text-align: center;
+  box-shadow: var(--ombre);
+  margin-bottom: 16px;
+}
+.jour-entete .theme-emoji { font-size: 3.2rem; }
+.jour-entete h2 { margin: 6px 0 2px; font-size: 1.5rem; color: var(--corail-fonce); letter-spacing: 1px; }
+.jour-entete .date-txt { color: var(--texte-doux); font-weight: 700; font-size: 1rem; }
+
+.ateliers { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.atelier {
+  background: #fff;
+  border-radius: var(--rayon);
+  padding: 16px;
+  box-shadow: var(--ombre);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 8px solid var(--turquoise);
+}
+.atelier .haut { display: flex; align-items: center; gap: 10px; }
+.atelier .a-emoji { font-size: 2.2rem; }
+.atelier h3 { margin: 0; font-size: 1.15rem; color: var(--texte); letter-spacing: .5px; flex: 1; }
+.badge {
+  display: inline-block; font-size: .72rem; font-weight: 800; padding: 4px 10px;
+  border-radius: 999px; text-transform: uppercase; letter-spacing: .5px; white-space: nowrap;
+}
+.badge.imprimer { background: #E8F4FF; color: #2E6FB0; }
+.badge.ecran { background: #EAF9F0; color: #1E9C6B; }
+.badge.sansrien { background: #FFF1DC; color: #C77A15; }
+.atelier .consigne { font-size: 1rem; color: var(--texte); font-weight: 700; }
+.atelier .parent { font-size: .82rem; color: var(--texte-doux); font-style: italic; }
+.atelier .repli { font-size: .82rem; background: #FFF6E9; border-radius: 12px; padding: 8px 10px; color: var(--texte-doux); }
+.atelier .repli b { color: var(--corail-fonce); }
+.atelier .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; align-items: center; }
+.check {
+  display: flex; align-items: center; gap: 8px; margin-left: auto;
+  font-weight: 800; font-size: .9rem; color: var(--texte-doux); user-select: none; cursor: pointer;
+}
+.check .box {
+  width: 34px; height: 34px; border-radius: 10px; border: 3px solid var(--turquoise);
+  display: flex; align-items: center; justify-content: center; font-size: 1.3rem; background: #fff;
+}
+.check.ok .box { background: var(--vert); border-color: var(--vert); color: #fff; }
+.check.ok { color: var(--vert); }
+
+/* ---------- Modale (jeu / atelier plein écran) ---------- */
+.modale {
+  position: fixed; inset: 0; z-index: 50;
+  background: rgba(74,59,46,0.55);
+  display: none; align-items: stretch; justify-content: center;
+  padding: 0;
+}
+.modale.actif { display: flex; }
+.modale-inner {
+  background: var(--creme);
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  min-height: 100%;
+  border-radius: 0;
+  padding: 14px 16px 40px;
+  overflow-y: auto;
+  position: relative;
+}
+@media (min-width: 700px) {
+  .modale { padding: 20px; align-items: center; }
+  .modale-inner { min-height: auto; max-height: 94vh; border-radius: var(--rayon); }
+}
+.modale-fermer {
+  position: sticky; top: 0; float: right;
+  border: none; background: var(--corail); color: #fff;
+  width: 54px; height: 54px; border-radius: 50%; font-size: 1.6rem; font-weight: 900;
+  box-shadow: var(--ombre); z-index: 5;
+}
+.modale h2 { text-align: center; color: var(--corail-fonce); letter-spacing: 1px; margin: 4px 20px 6px; }
+.modale .instruction { text-align: center; font-size: 1.15rem; font-weight: 800; margin: 10px 0; }
+.modale .grand-emoji { font-size: clamp(4rem, 18vw, 8rem); text-align: center; display: block; }
+
+/* Jeu de lecture */
+.choix-lettres, .choix-images {
+  display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 16px 0;
+}
+.choix-lettre {
+  width: 92px; height: 92px; border-radius: 22px; border: 4px solid var(--turquoise);
+  background: #fff; font-size: 3rem; font-weight: 900; color: var(--texte);
+  box-shadow: var(--ombre); display: flex; align-items: center; justify-content: center;
+}
+.choix-image {
+  width: 120px; height: 120px; border-radius: 22px; border: 4px solid var(--jaune);
+  background: #fff; font-size: 4rem; box-shadow: var(--ombre);
+  display: flex; align-items: center; justify-content: center;
+}
+.choix-lettre.bon, .choix-image.bon { border-color: var(--vert); background: #EAF9F0; animation: pop .4s; }
+.choix-lettre.faux, .choix-image.faux { border-color: var(--corail); background: #FFECEA; animation: shake .3s; }
+.mot-affiche { text-align: center; font-size: 2.4rem; font-weight: 900; letter-spacing: 3px; margin: 8px 0; }
+.mot-affiche .surligne { color: var(--corail); }
+.syllabe-zone { display: flex; gap: 10px; justify-content: center; align-items: center; margin: 16px 0; flex-wrap: wrap; }
+.syllabe-bloc {
+  min-width: 84px; height: 100px; border-radius: 20px; background: #fff; border: 4px dashed var(--turquoise);
+  font-size: 2.6rem; font-weight: 900; display: flex; align-items: center; justify-content: center;
+}
+.syllabe-bloc.plein { border-style: solid; background: #EAF9F0; }
+.progres-jeu { text-align: center; font-weight: 800; color: var(--texte-doux); margin: 8px 0; }
+@keyframes pop { 0%{transform:scale(1)} 50%{transform:scale(1.15)} 100%{transform:scale(1)} }
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+
+/* Relier */
+.relier-zone { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; position: relative; margin: 14px 0; }
+.relier-col { display: flex; flex-direction: column; gap: 12px; }
+.relier-tuile {
+  background: #fff; border: 4px solid var(--abricot-fonce); border-radius: 18px;
+  min-height: 74px; display: flex; align-items: center; justify-content: center; gap: 8px;
+  font-size: 2.4rem; font-weight: 900; box-shadow: var(--ombre); padding: 6px;
+}
+.relier-tuile .mot-txt { font-size: 1.3rem; letter-spacing: 1px; }
+.relier-tuile.selection { border-color: var(--turquoise); background: #EAFBFA; }
+.relier-tuile.lie { border-color: var(--vert); background: #EAF9F0; }
+.relier-tuile.ombre { color: #2b2b2b; filter: brightness(0) opacity(.72); }
+.relier-svg { position: absolute; inset: 0; pointer-events: none; width: 100%; height: 100%; }
+
+/* Numération */
+.num-objets { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-width: 560px; margin: 14px auto; }
+.num-objets span { font-size: 2.4rem; transition: transform .2s; }
+.num-objets span.compte { transform: scale(1.35); filter: drop-shadow(0 0 4px var(--jaune)); }
+.num-choix { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 14px 0; }
+.num-btn {
+  min-width: 78px; height: 84px; border-radius: 20px; border: 4px solid var(--violet);
+  background: #fff; font-size: 2.6rem; font-weight: 900; color: var(--texte); box-shadow: var(--ombre);
+}
+.num-btn.bon { background: #EDE7FB; border-color: var(--vert); }
+.num-btn.faux { background: #FFECEA; border-color: var(--corail); }
+.bande {
+  display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin: 14px 0;
+}
+.bande .cell {
+  min-width: 46px; height: 56px; border-radius: 12px; background: #fff; border: 3px solid var(--abricot-fonce);
+  font-size: 1.6rem; font-weight: 900; display: flex; align-items: center; justify-content: center;
+}
+.bande .cell.trou { border-style: dashed; border-color: var(--corail); background: #FFF1DC; color: var(--corail); }
+.aide-zone { text-align: center; margin: 10px 0; }
+
+/* Logique */
+.suite-zone { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center; margin: 16px 0; }
+.suite-zone .el { font-size: 3rem; }
+.suite-zone .trou { width: 74px; height: 74px; border-radius: 16px; border: 4px dashed var(--corail); background: #FFF1DC; display: flex; align-items:center; justify-content:center; font-size: 2rem; }
+
+/* Graphisme / découpage plein écran */
+.trace-wrap { position: relative; width: 100%; max-width: 720px; margin: 10px auto; }
+.trace-wrap svg { width: 100%; height: auto; background: #fff; border-radius: var(--rayon-s); box-shadow: var(--ombre); touch-action: none; }
+.trace-wrap canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; }
+
+/* Palette emoji (événements) */
+.palette { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 12px 0; }
+.palette button { font-size: 1.8rem; width: 54px; height: 54px; border-radius: 14px; border: 3px solid transparent; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+.palette button.sel { border-color: var(--turquoise); background: #EAFBFA; }
+.champ-txt {
+  width: 100%; font-size: 1.4rem; font-weight: 800; text-align: center; text-transform: uppercase;
+  padding: 12px; border-radius: 14px; border: 3px solid var(--abricot-fonce); margin: 8px 0; letter-spacing: 1px;
+}
+.evt-liste { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.evt-ligne { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 12px; padding: 8px 10px; box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+.evt-ligne .em { font-size: 1.6rem; }
+.evt-ligne .tx { flex: 1; font-weight: 800; }
+.evt-ligne button { border: none; background: var(--corail); color: #fff; border-radius: 10px; width: 40px; height: 40px; font-size: 1.2rem; }
+
+.mascotte { text-align: center; font-size: 3rem; margin: 10px 0; }
+.mascotte .bulle { font-size: 1rem; font-weight: 800; color: var(--vert); display: block; }
+
+.aide-pied { text-align:center; color: var(--texte-doux); font-size:.85rem; margin-top: 40px; line-height: 1.5; }
+
+/* ---------- Zone impression (cachée à l'écran) ---------- */
+.zone-print { display: none; }
+
+/* ============================================================
+   IMPRESSION
+   ============================================================ */
+@media print {
+  @page { size: A4 portrait; margin: 12mm; }
+  body { background: #fff; }
+  .app, .entete, .compte, .barre, .calendrier, .jour-vue, .modale, .section-titre, .no-print { display: none !important; }
+  .zone-print { display: block !important; }
+  .fiche {
+    page-break-after: always;
+    color: #000;
+    text-align: center;
+  }
+  .fiche:last-child { page-break-after: auto; }
+  .fiche h1 { font-size: 30pt; margin: 0 0 6pt; letter-spacing: 2px; }
+  .fiche .theme-line { font-size: 16pt; color: #333; margin-bottom: 10pt; }
+  .fiche .consigne-print { font-size: 18pt; font-weight: bold; margin: 8pt 0 14pt; }
+  .fiche .consigne-print .em { font-size: 26pt; }
+  .fiche svg { width: 100%; height: auto; }
+  .fiche .print-emoji { font-size: 60pt; }
+  .fiche-relier { display: flex; justify-content: space-between; padding: 0 30pt; }
+  .fiche-relier .col { display: flex; flex-direction: column; gap: 34pt; }
+  .fiche-relier .tuile { font-size: 46pt; border: 3pt solid #000; border-radius: 14pt; width: 120pt; height: 90pt; display: flex; align-items: center; justify-content: center; }
+  .fiche-relier .tuile .mt { font-size: 22pt; font-weight: bold; }
+  .fiche-num-objets { font-size: 40pt; line-height: 1.5; max-width: 90%; margin: 0 auto; }
+  .fiche-cases { display: flex; flex-wrap: wrap; gap: 10pt; justify-content: center; margin-top: 16pt; }
+  .fiche-cases .c { width: 60pt; height: 60pt; border: 3pt solid #000; border-radius: 8pt; }
+  /* Programme imprimable */
+  .fiche-prog { text-align: left; max-width: 90%; margin: 0 auto; }
+  .fiche-prog .ligne { display: flex; align-items: center; gap: 12pt; border-bottom: 2pt dashed #999; padding: 12pt 0; font-size: 20pt; font-weight: bold; }
+  .fiche-prog .ligne .em { font-size: 34pt; }
+  .fiche-prog .ligne .cc { margin-left: auto; width: 40pt; height: 40pt; border: 3pt solid #000; border-radius: 8pt; }
+  /* Calendrier imprimable */
+  .cal-print { page-break-after: always; }
+  .cal-print h1 { font-size: 26pt; text-align: center; margin: 0 0 8pt; }
+  .cal-print table { width: 100%; border-collapse: collapse; }
+  .cal-print th { font-size: 11pt; padding: 4pt; border: 1.5pt solid #000; background: #eee; }
+  .cal-print td { border: 1.5pt solid #000; height: 90pt; vertical-align: top; width: 14.28%; padding: 3pt; }
+  .cal-print td .n { font-size: 15pt; font-weight: bold; }
+  .cal-print td .e { font-size: 10pt; font-weight: bold; display: block; }
+  .cal-print td.off { background: #f4f4f4; }
+}
+
+/* Impression paysage pour le calendrier seul */
+.print-cal-mode { }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

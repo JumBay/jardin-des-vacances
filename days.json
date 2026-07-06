@@ -1,0 +1,1220 @@
+{
+  "2026-07-06": {
+    "date": "2026-07-06",
+    "theme": "ferme",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "traits",
+        "niveau": 0
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-07": {
+    "date": "2026-07-07",
+    "theme": "mer",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 3
+      },
+      {
+        "type": "logique",
+        "variante": "intrus",
+        "longueur": 5
+      }
+    ]
+  },
+  "2026-07-08": {
+    "date": "2026-07-08",
+    "theme": "sauvages",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "droite"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-09": {
+    "date": "2026-07-09",
+    "theme": "jardin",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 10
+      },
+      {
+        "type": "numeration",
+        "max": 10
+      }
+    ]
+  },
+  "2026-07-10": {
+    "date": "2026-07-10",
+    "theme": "fruits",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "ronds",
+        "niveau": 0
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 5
+      }
+    ]
+  },
+  "2026-07-11": {
+    "date": "2026-07-11",
+    "theme": "transports",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 3
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-12": {
+    "date": "2026-07-12",
+    "theme": "cirque",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 10
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 5
+      }
+    ]
+  },
+  "2026-07-13": {
+    "date": "2026-07-13",
+    "theme": "espace",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "droite"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-14": {
+    "date": "2026-07-14",
+    "theme": "dinos",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "ponts",
+        "niveau": 0
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-15": {
+    "date": "2026-07-15",
+    "theme": "contes",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 3
+      },
+      {
+        "type": "logique",
+        "variante": "intrus",
+        "longueur": 5
+      }
+    ]
+  },
+  "2026-07-16": {
+    "date": "2026-07-16",
+    "theme": "corps",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "droite"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-17": {
+    "date": "2026-07-17",
+    "theme": "meteo",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 10
+      },
+      {
+        "type": "numeration",
+        "max": 10
+      }
+    ]
+  },
+  "2026-07-18": {
+    "date": "2026-07-18",
+    "theme": "insectes",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "traits",
+        "niveau": 0
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 5
+      }
+    ]
+  },
+  "2026-07-19": {
+    "date": "2026-07-19",
+    "theme": "musique",
+    "phase": 0,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 3
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-20": {
+    "date": "2026-07-20",
+    "theme": "couleurs",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 15
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 6
+      }
+    ]
+  },
+  "2026-07-21": {
+    "date": "2026-07-21",
+    "theme": "ferme",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-22": {
+    "date": "2026-07-22",
+    "theme": "mer",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "creneaux",
+        "niveau": 1
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-23": {
+    "date": "2026-07-23",
+    "theme": "sauvages",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 4
+      },
+      {
+        "type": "logique",
+        "variante": "intrus",
+        "longueur": 6
+      }
+    ]
+  },
+  "2026-07-24": {
+    "date": "2026-07-24",
+    "theme": "jardin",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-25": {
+    "date": "2026-07-25",
+    "theme": "fruits",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 15
+      },
+      {
+        "type": "numeration",
+        "max": 15
+      }
+    ]
+  },
+  "2026-07-26": {
+    "date": "2026-07-26",
+    "theme": "transports",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "ponts",
+        "niveau": 1
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 6
+      }
+    ]
+  },
+  "2026-07-27": {
+    "date": "2026-07-27",
+    "theme": "cirque",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 4
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-28": {
+    "date": "2026-07-28",
+    "theme": "espace",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 15
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 6
+      }
+    ]
+  },
+  "2026-07-29": {
+    "date": "2026-07-29",
+    "theme": "dinos",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-30": {
+    "date": "2026-07-30",
+    "theme": "contes",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 1
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-07-31": {
+    "date": "2026-07-31",
+    "theme": "corps",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 4
+      },
+      {
+        "type": "logique",
+        "variante": "intrus",
+        "longueur": 6
+      }
+    ]
+  },
+  "2026-08-01": {
+    "date": "2026-08-01",
+    "theme": "meteo",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-02": {
+    "date": "2026-08-02",
+    "theme": "insectes",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 15
+      },
+      {
+        "type": "numeration",
+        "max": 15
+      }
+    ]
+  },
+  "2026-08-03": {
+    "date": "2026-08-03",
+    "theme": "musique",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "creneaux",
+        "niveau": 1
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 6
+      }
+    ]
+  },
+  "2026-08-04": {
+    "date": "2026-08-04",
+    "theme": "couleurs",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 4
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-05": {
+    "date": "2026-08-05",
+    "theme": "ferme",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 15
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 6
+      }
+    ]
+  },
+  "2026-08-06": {
+    "date": "2026-08-06",
+    "theme": "mer",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-07": {
+    "date": "2026-08-07",
+    "theme": "sauvages",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "ponts",
+        "niveau": 1
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-08": {
+    "date": "2026-08-08",
+    "theme": "jardin",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 4
+      },
+      {
+        "type": "logique",
+        "variante": "intrus",
+        "longueur": 6
+      }
+    ]
+  },
+  "2026-08-09": {
+    "date": "2026-08-09",
+    "theme": "fruits",
+    "phase": 1,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-10": {
+    "date": "2026-08-10",
+    "theme": "transports",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 20
+      },
+      {
+        "type": "numeration",
+        "max": 20
+      }
+    ]
+  },
+  "2026-08-11": {
+    "date": "2026-08-11",
+    "theme": "cirque",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "boucles",
+        "niveau": 2
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 8
+      }
+    ]
+  },
+  "2026-08-12": {
+    "date": "2026-08-12",
+    "theme": "espace",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 6
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-13": {
+    "date": "2026-08-13",
+    "theme": "dinos",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 20
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 8
+      }
+    ]
+  },
+  "2026-08-14": {
+    "date": "2026-08-14",
+    "theme": "contes",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-15": {
+    "date": "2026-08-15",
+    "theme": "corps",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "spirales",
+        "niveau": 2
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-16": {
+    "date": "2026-08-16",
+    "theme": "meteo",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 6
+      },
+      {
+        "type": "logique",
+        "variante": "intrus",
+        "longueur": 8
+      }
+    ]
+  },
+  "2026-08-17": {
+    "date": "2026-08-17",
+    "theme": "insectes",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-18": {
+    "date": "2026-08-18",
+    "theme": "musique",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 20
+      },
+      {
+        "type": "numeration",
+        "max": 20
+      }
+    ]
+  },
+  "2026-08-19": {
+    "date": "2026-08-19",
+    "theme": "couleurs",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 2
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 8
+      }
+    ]
+  },
+  "2026-08-20": {
+    "date": "2026-08-20",
+    "theme": "ferme",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 6
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-21": {
+    "date": "2026-08-21",
+    "theme": "mer",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 20
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 8
+      }
+    ]
+  },
+  "2026-08-22": {
+    "date": "2026-08-22",
+    "theme": "sauvages",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-23": {
+    "date": "2026-08-23",
+    "theme": "jardin",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "boucles",
+        "niveau": 2
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-24": {
+    "date": "2026-08-24",
+    "theme": "fruits",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 6
+      },
+      {
+        "type": "logique",
+        "variante": "intrus",
+        "longueur": 8
+      }
+    ]
+  },
+  "2026-08-25": {
+    "date": "2026-08-25",
+    "theme": "transports",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-26": {
+    "date": "2026-08-26",
+    "theme": "cirque",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 20
+      },
+      {
+        "type": "numeration",
+        "max": 20
+      }
+    ]
+  },
+  "2026-08-27": {
+    "date": "2026-08-27",
+    "theme": "espace",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "spirales",
+        "niveau": 2
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 8
+      }
+    ]
+  },
+  "2026-08-28": {
+    "date": "2026-08-28",
+    "theme": "dinos",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "nombre-points",
+        "paires": 6
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-29": {
+    "date": "2026-08-29",
+    "theme": "contes",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "numeration",
+        "max": 20
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 8
+      }
+    ]
+  },
+  "2026-08-30": {
+    "date": "2026-08-30",
+    "theme": "corps",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  },
+  "2026-08-31": {
+    "date": "2026-08-31",
+    "theme": "meteo",
+    "phase": 2,
+    "ateliers": [
+      {
+        "type": "programme"
+      },
+      {
+        "type": "lecture"
+      },
+      {
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 2
+      },
+      {
+        "type": "phono"
+      }
+    ]
+  }
+}
