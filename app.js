@@ -99,9 +99,17 @@ async function boot() {
       'Ouvre le site via un serveur web (ou GitHub Pages), pas en double-cliquant le fichier.</div>';
     return;
   }
-  renderCompte();
-  renderCalendrier();
-  bindGlobal();
+  if (document.getElementById("compte")) renderCompte();
+  if (document.getElementById("calendrier")) renderCalendrier();
+  if (document.getElementById("btn-cal-print")) bindGlobal();
+  // Lien profond : #2026-07-20 ouvre directement ce jour
+  ouvrirDepuisHash();
+  window.addEventListener("hashchange", ouvrirDepuisHash);
+  if (window.__afterBoot) window.__afterBoot();
+}
+function ouvrirDepuisHash() {
+  const h = decodeURIComponent(location.hash.replace(/^#/, ""));
+  if (/^\d{4}-\d{2}-\d{2}$/.test(h) && DAYS[h] && document.getElementById("jour-vue")) ouvrirJour(h);
 }
 
 /* ============================================================
@@ -312,6 +320,7 @@ function ouvrirJour(date) {
   vue.querySelectorAll("[data-print-at]").forEach(b => b.addEventListener("click", () => imprimerAtelier(date, +b.dataset.printAt)));
   vue.querySelectorAll("[data-check]").forEach(l => l.addEventListener("click", () => toggleCheck(date, +l.dataset.check, l)));
 
+  try { history.replaceState(null, "", "#" + date); } catch (e) {}
   window.scrollTo(0, 0);
   if (date === TODAY) {
     setTimeout(() => parler("AUJOURD'HUI, C'EST " + JOURS_LONG[dObj.getDay()] + ". LE THÈME DU JOUR, C'EST " + t.nom.replace(/^(LE |LA |L'|LES )/, "")), 350);
@@ -321,6 +330,7 @@ function ouvrirJour(date) {
 function fermerJour() {
   document.getElementById("jour-vue").classList.remove("actif");
   document.getElementById("accueil").style.display = "block";
+  try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
   renderCalendrier();
 }
 

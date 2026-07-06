@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FF6F5E">
+  <title>Toutes les activités · Le Jardin des Vacances</title>
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="entete">
+      <h1>👀 TOUTES LES ACTIVITÉS</h1>
+      <p class="sous">DE L'ÉTÉ, JOUR PAR JOUR — POUR RELIRE ET SIGNALER CE QUI NE VA PAS</p>
+    </header>
+
+    <div class="barre">
+      <a class="btn gris" href="index.html">⬅️ LE CALENDRIER</a>
+    </div>
+
+    <div style="background:#fff;border-radius:20px;padding:14px 16px;box-shadow:var(--ombre);margin:0 auto 16px;max-width:760px">
+      <p style="margin:0;font-weight:700;color:#4A3B2E">
+        💬 Pour me signaler un souci, donne-moi la <b>date</b> et le <b>numéro</b> de l'activité
+        (ex : « le 12 juillet, l'activité ③ ne va pas »). Tu peux aussi taper <b>OUVRIR ▶</b>
+        pour l'essayer directement.
+      </p>
+    </div>
+
+    <div class="ap-stats" id="stats"></div>
+    <div id="liste"></div>
+
+    <p class="aide-pied">🖨️ À IMPRIMER · 📱 SUR L'ÉCRAN · 🏠 SANS RIEN</p>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // app.js charge DAYS puis appelle __afterBoot (les rendus du tableau de bord
+    // sont ignorés ici car leurs éléments n'existent pas sur cette page).
+    function paramsTexte(at) {
+      if (at.type === "relier") return "paires : " + at.paires + " · " + at.variante;
+      if (at.type === "logique") return "type : " + at.variante;
+      if (at.type === "decoupage") return "ligne : " + at.forme;
+      if (at.type === "graphisme") return "motif : " + (MOTIF_LABEL[at.motif] || at.motif).toLowerCase();
+      if (at.type === "numeration") return "jusqu'à " + at.max;
+      return "";
+    }
+    window.__afterBoot = function () {
+      const dates = Object.keys(DAYS).sort();
+      // Statistiques par type sur tout l'été
+      const compte = {};
+      for (const d of dates) for (const a of DAYS[d].ateliers) compte[a.type] = (compte[a.type] || 0) + 1;
+      document.getElementById("stats").innerHTML =
+        `<div class="ap-stat">📆 <b>${dates.length}</b> jours</div>` +
+        `<div class="ap-stat">🧩 <b>${dates.length * DAYS[dates[0]].ateliers.length}</b> activités</div>` +
+        Object.entries(compte).sort((a, b) => b[1] - a[1]).map(([t, n]) =>
+          `<div class="ap-stat">${ATELIER_META[t].emoji} <b>${n}</b></div>`).join("");
+
+      let html = "";
+      for (const date of dates) {
+        const j = DAYS[date];
+        const t = THEMES[j.theme];
+        const dObj = parseISO(date);
+        const auj = date === TODAY;
+        const dateTxt = `${JOURS_LONG[dObj.getDay()]} ${dObj.getDate()} ${MOIS_NOM[dObj.getMonth()]}`;
+        const phaseLbl = ["FACILE", "MOYEN", "PLUS DUR"][j.phase];
+        let chips = "";
+        j.ateliers.forEach((at, i) => {
+          const meta = ATELIER_META[at.type];
+          const txt = atelierTexte(at, j.theme);
+          const prm = paramsTexte(at);
+          chips += `<div class="ap-chip">
+            <span class="n">${i + 1}</span>
+            <span class="em">${meta.emoji}</span>
+            <span class="ti">${txt.titre}${prm ? ` <span class="prm">(${prm})</span>` : ""}</span>
+            <span class="mode ${meta.badge}">${BADGE_TXT[meta.badge]}</span>
+          </div>`;
+        });
+        html += `<div class="ap-jour ${auj ? "est-auj" : ""}" id="${date}">
+          <div class="ap-head">
+            <span class="ap-date">${auj ? "⭐ " : ""}${dateTxt}</span>
+            <span class="ap-theme">${t.emoji} ${t.nom}</span>
+            <span class="ap-phase">${phaseLbl}</span>
+            <a class="ap-open" href="index.html#${date}">OUVRIR ▶</a>
+          </div>
+          <div class="ap-chips">${chips}</div>
+        </div>`;
+      }
+      document.getElementById("liste").innerHTML = html;
+      // si on arrive avec #date, on y descend
+      const h = location.hash.replace(/^#/, "");
+      if (h && document.getElementById(h)) document.getElementById(h).scrollIntoView();
+    };
+  </script>
+</body>
+</html>

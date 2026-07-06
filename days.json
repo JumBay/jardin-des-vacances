@@ -16,7 +16,18 @@
         "niveau": 0
       },
       {
-        "type": "phono"
+        "type": "numeration",
+        "max": 10
+      },
+      {
+        "type": "relier",
+        "variante": "mot-image",
+        "paires": 3
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 5
       }
     ]
   },
@@ -32,6 +43,10 @@
         "type": "lecture"
       },
       {
+        "type": "numeration",
+        "max": 10
+      },
+      {
         "type": "relier",
         "variante": "nombre-points",
         "paires": 3
@@ -40,6 +55,10 @@
         "type": "logique",
         "variante": "intrus",
         "longueur": 5
+      },
+      {
+        "type": "decoupage",
+        "forme": "droite"
       }
     ]
   },
@@ -53,6 +72,16 @@
       },
       {
         "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "image-ombre",
+        "paires": 3
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 5
       },
       {
         "type": "decoupage",
@@ -75,12 +104,21 @@
         "type": "lecture"
       },
       {
-        "type": "numeration",
-        "max": 10
+        "type": "logique",
+        "variante": "tri",
+        "longueur": 5
       },
       {
-        "type": "numeration",
-        "max": 10
+        "type": "decoupage",
+        "forme": "droite"
+      },
+      {
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "traits",
+        "niveau": 0
       }
     ]
   },
@@ -96,14 +134,20 @@
         "type": "lecture"
       },
       {
+        "type": "decoupage",
+        "forme": "droite"
+      },
+      {
+        "type": "phono"
+      },
+      {
         "type": "graphisme",
         "motif": "ronds",
         "niveau": 0
       },
       {
-        "type": "logique",
-        "variante": "suite",
-        "longueur": 5
+        "type": "numeration",
+        "max": 10
       }
     ]
   },
@@ -119,12 +163,21 @@
         "type": "lecture"
       },
       {
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "ponts",
+        "niveau": 0
+      },
+      {
+        "type": "numeration",
+        "max": 10
+      },
+      {
         "type": "relier",
         "variante": "nombre-points",
         "paires": 3
-      },
-      {
-        "type": "phono"
       }
     ]
   },
@@ -140,8 +193,18 @@
         "type": "lecture"
       },
       {
+        "type": "graphisme",
+        "motif": "traits",
+        "niveau": 0
+      },
+      {
         "type": "numeration",
         "max": 10
+      },
+      {
+        "type": "relier",
+        "variante": "image-ombre",
+        "paires": 3
       },
       {
         "type": "logique",
@@ -162,11 +225,22 @@
         "type": "lecture"
       },
       {
-        "type": "decoupage",
-        "forme": "droite"
+        "type": "numeration",
+        "max": 10
       },
       {
-        "type": "phono"
+        "type": "relier",
+        "variante": "forme-objet",
+        "paires": 3
+      },
+      {
+        "type": "logique",
+        "variante": "tri",
+        "longueur": 5
+      },
+      {
+        "type": "decoupage",
+        "forme": "droite"
       }
     ]
   },
@@ -182,9 +256,18 @@
         "type": "lecture"
       },
       {
-        "type": "graphisme",
-        "motif": "ponts",
-        "niveau": 0
+        "type": "relier",
+        "variante": "mot-image",
+        "paires": 3
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 5
+      },
+      {
+        "type": "decoupage",
+        "forme": "droite"
       },
       {
         "type": "phono"
@@ -203,14 +286,21 @@
         "type": "lecture"
       },
       {
-        "type": "relier",
-        "variante": "nombre-points",
-        "paires": 3
-      },
-      {
         "type": "logique",
         "variante": "intrus",
         "longueur": 5
+      },
+      {
+        "type": "decoupage",
+        "forme": "droite"
+      },
+      {
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "traits",
+        "niveau": 0
       }
     ]
   },
@@ -231,6 +321,15 @@
       },
       {
         "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "ronds",
+        "niveau": 0
+      },
+      {
+        "type": "numeration",
+        "max": 10
       }
     ]
   },
@@ -246,12 +345,21 @@
         "type": "lecture"
       },
       {
-        "type": "numeration",
-        "max": 10
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "ponts",
+        "niveau": 0
       },
       {
         "type": "numeration",
         "max": 10
+      },
+      {
+        "type": "relier",
+        "variante": "forme-objet",
+        "paires": 3
       }
     ]
   },
@@ -272,6 +380,15 @@
         "niveau": 0
       },
       {
+        "type": "numeration",
+        "max": 10
+      },
+      {
+        "type": "relier",
+        "variante": "mot-image",
+        "paires": 3
+      },
+      {
         "type": "logique",
         "variante": "suite",
         "longueur": 5
@@ -290,12 +407,22 @@
         "type": "lecture"
       },
       {
+        "type": "numeration",
+        "max": 10
+      },
+      {
         "type": "relier",
         "variante": "nombre-points",
         "paires": 3
       },
       {
-        "type": "phono"
+        "type": "logique",
+        "variante": "intrus",
+        "longueur": 5
+      },
+      {
+        "type": "decoupage",
+        "forme": "droite"
       }
     ]
   },
@@ -311,13 +438,21 @@
         "type": "lecture"
       },
       {
-        "type": "numeration",
-        "max": 15
+        "type": "relier",
+        "variante": "image-ombre",
+        "paires": 4
       },
       {
         "type": "logique",
         "variante": "suite",
         "longueur": 6
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
       }
     ]
   },
@@ -333,11 +468,21 @@
         "type": "lecture"
       },
       {
+        "type": "logique",
+        "variante": "tri",
+        "longueur": 6
+      },
+      {
         "type": "decoupage",
         "forme": "courbe"
       },
       {
         "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 1
       }
     ]
   },
@@ -353,12 +498,20 @@
         "type": "lecture"
       },
       {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      },
+      {
         "type": "graphisme",
         "motif": "creneaux",
         "niveau": 1
       },
       {
-        "type": "phono"
+        "type": "numeration",
+        "max": 15
       }
     ]
   },
@@ -374,14 +527,21 @@
         "type": "lecture"
       },
       {
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "ponts",
+        "niveau": 1
+      },
+      {
+        "type": "numeration",
+        "max": 15
+      },
+      {
         "type": "relier",
         "variante": "nombre-points",
         "paires": 4
-      },
-      {
-        "type": "logique",
-        "variante": "intrus",
-        "longueur": 6
       }
     ]
   },
@@ -397,11 +557,23 @@
         "type": "lecture"
       },
       {
-        "type": "decoupage",
-        "forme": "courbe"
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 1
       },
       {
-        "type": "phono"
+        "type": "numeration",
+        "max": 15
+      },
+      {
+        "type": "relier",
+        "variante": "image-ombre",
+        "paires": 4
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 6
       }
     ]
   },
@@ -421,8 +593,18 @@
         "max": 15
       },
       {
-        "type": "numeration",
-        "max": 15
+        "type": "relier",
+        "variante": "forme-objet",
+        "paires": 4
+      },
+      {
+        "type": "logique",
+        "variante": "tri",
+        "longueur": 6
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
       }
     ]
   },
@@ -438,14 +620,21 @@
         "type": "lecture"
       },
       {
-        "type": "graphisme",
-        "motif": "ponts",
-        "niveau": 1
+        "type": "relier",
+        "variante": "mot-image",
+        "paires": 4
       },
       {
         "type": "logique",
         "variante": "suite",
         "longueur": 6
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
       }
     ]
   },
@@ -461,12 +650,21 @@
         "type": "lecture"
       },
       {
-        "type": "relier",
-        "variante": "nombre-points",
-        "paires": 4
+        "type": "logique",
+        "variante": "intrus",
+        "longueur": 6
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
       },
       {
         "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 1
       }
     ]
   },
@@ -482,13 +680,20 @@
         "type": "lecture"
       },
       {
-        "type": "numeration",
-        "max": 15
+        "type": "decoupage",
+        "forme": "courbe"
       },
       {
-        "type": "logique",
-        "variante": "suite",
-        "longueur": 6
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "creneaux",
+        "niveau": 1
+      },
+      {
+        "type": "numeration",
+        "max": 15
       }
     ]
   },
@@ -504,11 +709,21 @@
         "type": "lecture"
       },
       {
-        "type": "decoupage",
-        "forme": "courbe"
+        "type": "phono"
       },
       {
-        "type": "phono"
+        "type": "graphisme",
+        "motif": "ponts",
+        "niveau": 1
+      },
+      {
+        "type": "numeration",
+        "max": 15
+      },
+      {
+        "type": "relier",
+        "variante": "forme-objet",
+        "paires": 4
       }
     ]
   },
@@ -529,7 +744,18 @@
         "niveau": 1
       },
       {
-        "type": "phono"
+        "type": "numeration",
+        "max": 15
+      },
+      {
+        "type": "relier",
+        "variante": "mot-image",
+        "paires": 4
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 6
       }
     ]
   },
@@ -545,6 +771,10 @@
         "type": "lecture"
       },
       {
+        "type": "numeration",
+        "max": 15
+      },
+      {
         "type": "relier",
         "variante": "nombre-points",
         "paires": 4
@@ -553,6 +783,10 @@
         "type": "logique",
         "variante": "intrus",
         "longueur": 6
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
       }
     ]
   },
@@ -566,6 +800,16 @@
       },
       {
         "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "image-ombre",
+        "paires": 4
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 6
       },
       {
         "type": "decoupage",
@@ -588,12 +832,21 @@
         "type": "lecture"
       },
       {
-        "type": "numeration",
-        "max": 15
+        "type": "logique",
+        "variante": "tri",
+        "longueur": 6
       },
       {
-        "type": "numeration",
-        "max": 15
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 1
       }
     ]
   },
@@ -609,14 +862,20 @@
         "type": "lecture"
       },
       {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      },
+      {
         "type": "graphisme",
         "motif": "creneaux",
         "niveau": 1
       },
       {
-        "type": "logique",
-        "variante": "suite",
-        "longueur": 6
+        "type": "numeration",
+        "max": 15
       }
     ]
   },
@@ -632,12 +891,21 @@
         "type": "lecture"
       },
       {
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "ponts",
+        "niveau": 1
+      },
+      {
+        "type": "numeration",
+        "max": 15
+      },
+      {
         "type": "relier",
         "variante": "nombre-points",
         "paires": 4
-      },
-      {
-        "type": "phono"
       }
     ]
   },
@@ -653,8 +921,18 @@
         "type": "lecture"
       },
       {
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 1
+      },
+      {
         "type": "numeration",
         "max": 15
+      },
+      {
+        "type": "relier",
+        "variante": "image-ombre",
+        "paires": 4
       },
       {
         "type": "logique",
@@ -675,11 +953,22 @@
         "type": "lecture"
       },
       {
-        "type": "decoupage",
-        "forme": "courbe"
+        "type": "numeration",
+        "max": 15
       },
       {
-        "type": "phono"
+        "type": "relier",
+        "variante": "forme-objet",
+        "paires": 4
+      },
+      {
+        "type": "logique",
+        "variante": "tri",
+        "longueur": 6
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
       }
     ]
   },
@@ -695,9 +984,18 @@
         "type": "lecture"
       },
       {
-        "type": "graphisme",
-        "motif": "ponts",
-        "niveau": 1
+        "type": "relier",
+        "variante": "mot-image",
+        "paires": 4
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 6
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
       },
       {
         "type": "phono"
@@ -716,14 +1014,21 @@
         "type": "lecture"
       },
       {
-        "type": "relier",
-        "variante": "nombre-points",
-        "paires": 4
-      },
-      {
         "type": "logique",
         "variante": "intrus",
         "longueur": 6
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 1
       }
     ]
   },
@@ -744,6 +1049,15 @@
       },
       {
         "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "creneaux",
+        "niveau": 1
+      },
+      {
+        "type": "numeration",
+        "max": 15
       }
     ]
   },
@@ -759,12 +1073,21 @@
         "type": "lecture"
       },
       {
-        "type": "numeration",
-        "max": 20
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 2
       },
       {
         "type": "numeration",
         "max": 20
+      },
+      {
+        "type": "relier",
+        "variante": "forme-objet",
+        "paires": 6
       }
     ]
   },
@@ -785,6 +1108,15 @@
         "niveau": 2
       },
       {
+        "type": "numeration",
+        "max": 20
+      },
+      {
+        "type": "relier",
+        "variante": "mot-image",
+        "paires": 6
+      },
+      {
         "type": "logique",
         "variante": "suite",
         "longueur": 8
@@ -803,12 +1135,22 @@
         "type": "lecture"
       },
       {
+        "type": "numeration",
+        "max": 20
+      },
+      {
         "type": "relier",
         "variante": "nombre-points",
         "paires": 6
       },
       {
-        "type": "phono"
+        "type": "logique",
+        "variante": "intrus",
+        "longueur": 8
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
       }
     ]
   },
@@ -824,13 +1166,21 @@
         "type": "lecture"
       },
       {
-        "type": "numeration",
-        "max": 20
+        "type": "relier",
+        "variante": "image-ombre",
+        "paires": 6
       },
       {
         "type": "logique",
         "variante": "suite",
         "longueur": 8
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
       }
     ]
   },
@@ -846,11 +1196,21 @@
         "type": "lecture"
       },
       {
+        "type": "logique",
+        "variante": "tri",
+        "longueur": 8
+      },
+      {
         "type": "decoupage",
         "forme": "courbe"
       },
       {
         "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "boucles",
+        "niveau": 2
       }
     ]
   },
@@ -866,12 +1226,20 @@
         "type": "lecture"
       },
       {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      },
+      {
         "type": "graphisme",
         "motif": "spirales",
         "niveau": 2
       },
       {
-        "type": "phono"
+        "type": "numeration",
+        "max": 20
       }
     ]
   },
@@ -887,14 +1255,21 @@
         "type": "lecture"
       },
       {
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 2
+      },
+      {
+        "type": "numeration",
+        "max": 20
+      },
+      {
         "type": "relier",
         "variante": "nombre-points",
         "paires": 6
-      },
-      {
-        "type": "logique",
-        "variante": "intrus",
-        "longueur": 8
       }
     ]
   },
@@ -910,11 +1285,23 @@
         "type": "lecture"
       },
       {
-        "type": "decoupage",
-        "forme": "courbe"
+        "type": "graphisme",
+        "motif": "boucles",
+        "niveau": 2
       },
       {
-        "type": "phono"
+        "type": "numeration",
+        "max": 20
+      },
+      {
+        "type": "relier",
+        "variante": "image-ombre",
+        "paires": 6
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 8
       }
     ]
   },
@@ -934,8 +1321,18 @@
         "max": 20
       },
       {
-        "type": "numeration",
-        "max": 20
+        "type": "relier",
+        "variante": "forme-objet",
+        "paires": 6
+      },
+      {
+        "type": "logique",
+        "variante": "tri",
+        "longueur": 8
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
       }
     ]
   },
@@ -951,14 +1348,21 @@
         "type": "lecture"
       },
       {
-        "type": "graphisme",
-        "motif": "vagues",
-        "niveau": 2
+        "type": "relier",
+        "variante": "mot-image",
+        "paires": 6
       },
       {
         "type": "logique",
         "variante": "suite",
         "longueur": 8
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
       }
     ]
   },
@@ -974,12 +1378,21 @@
         "type": "lecture"
       },
       {
-        "type": "relier",
-        "variante": "nombre-points",
-        "paires": 6
+        "type": "logique",
+        "variante": "intrus",
+        "longueur": 8
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
       },
       {
         "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "boucles",
+        "niveau": 2
       }
     ]
   },
@@ -995,13 +1408,20 @@
         "type": "lecture"
       },
       {
-        "type": "numeration",
-        "max": 20
+        "type": "decoupage",
+        "forme": "courbe"
       },
       {
-        "type": "logique",
-        "variante": "suite",
-        "longueur": 8
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "spirales",
+        "niveau": 2
+      },
+      {
+        "type": "numeration",
+        "max": 20
       }
     ]
   },
@@ -1017,11 +1437,21 @@
         "type": "lecture"
       },
       {
-        "type": "decoupage",
-        "forme": "courbe"
+        "type": "phono"
       },
       {
-        "type": "phono"
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 2
+      },
+      {
+        "type": "numeration",
+        "max": 20
+      },
+      {
+        "type": "relier",
+        "variante": "forme-objet",
+        "paires": 6
       }
     ]
   },
@@ -1042,7 +1472,18 @@
         "niveau": 2
       },
       {
-        "type": "phono"
+        "type": "numeration",
+        "max": 20
+      },
+      {
+        "type": "relier",
+        "variante": "mot-image",
+        "paires": 6
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 8
       }
     ]
   },
@@ -1058,6 +1499,10 @@
         "type": "lecture"
       },
       {
+        "type": "numeration",
+        "max": 20
+      },
+      {
         "type": "relier",
         "variante": "nombre-points",
         "paires": 6
@@ -1066,6 +1511,10 @@
         "type": "logique",
         "variante": "intrus",
         "longueur": 8
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
       }
     ]
   },
@@ -1079,6 +1528,16 @@
       },
       {
         "type": "lecture"
+      },
+      {
+        "type": "relier",
+        "variante": "image-ombre",
+        "paires": 6
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 8
       },
       {
         "type": "decoupage",
@@ -1101,12 +1560,21 @@
         "type": "lecture"
       },
       {
-        "type": "numeration",
-        "max": 20
+        "type": "logique",
+        "variante": "tri",
+        "longueur": 8
       },
       {
-        "type": "numeration",
-        "max": 20
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "boucles",
+        "niveau": 2
       }
     ]
   },
@@ -1122,14 +1590,20 @@
         "type": "lecture"
       },
       {
+        "type": "decoupage",
+        "forme": "courbe"
+      },
+      {
+        "type": "phono"
+      },
+      {
         "type": "graphisme",
         "motif": "spirales",
         "niveau": 2
       },
       {
-        "type": "logique",
-        "variante": "suite",
-        "longueur": 8
+        "type": "numeration",
+        "max": 20
       }
     ]
   },
@@ -1145,12 +1619,21 @@
         "type": "lecture"
       },
       {
+        "type": "phono"
+      },
+      {
+        "type": "graphisme",
+        "motif": "vagues",
+        "niveau": 2
+      },
+      {
+        "type": "numeration",
+        "max": 20
+      },
+      {
         "type": "relier",
         "variante": "nombre-points",
         "paires": 6
-      },
-      {
-        "type": "phono"
       }
     ]
   },
@@ -1166,8 +1649,18 @@
         "type": "lecture"
       },
       {
+        "type": "graphisme",
+        "motif": "boucles",
+        "niveau": 2
+      },
+      {
         "type": "numeration",
         "max": 20
+      },
+      {
+        "type": "relier",
+        "variante": "image-ombre",
+        "paires": 6
       },
       {
         "type": "logique",
@@ -1188,11 +1681,22 @@
         "type": "lecture"
       },
       {
-        "type": "decoupage",
-        "forme": "courbe"
+        "type": "numeration",
+        "max": 20
       },
       {
-        "type": "phono"
+        "type": "relier",
+        "variante": "forme-objet",
+        "paires": 6
+      },
+      {
+        "type": "logique",
+        "variante": "tri",
+        "longueur": 8
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
       }
     ]
   },
@@ -1208,9 +1712,18 @@
         "type": "lecture"
       },
       {
-        "type": "graphisme",
-        "motif": "vagues",
-        "niveau": 2
+        "type": "relier",
+        "variante": "mot-image",
+        "paires": 6
+      },
+      {
+        "type": "logique",
+        "variante": "suite",
+        "longueur": 8
+      },
+      {
+        "type": "decoupage",
+        "forme": "courbe"
       },
       {
         "type": "phono"

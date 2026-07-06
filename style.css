@@ -372,6 +372,33 @@ button { font-family: inherit; cursor: pointer; }
 .zone-print { display: none; }
 
 /* ============================================================
+   APERÇU — vue "toutes les activités"
+   ============================================================ */
+.ap-stats { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 8px 0 18px; }
+.ap-stat { background: #fff; border-radius: 14px; padding: 8px 12px; box-shadow: var(--ombre); font-weight: 800; font-size: .85rem; color: var(--texte); display: flex; gap: 6px; align-items: center; }
+.ap-stat b { color: var(--corail-fonce); }
+.ap-jour {
+  background: #fff; border-radius: var(--rayon); box-shadow: var(--ombre);
+  padding: 12px 14px; margin-bottom: 12px; border-left: 10px solid var(--turquoise);
+}
+.ap-jour.est-auj { border-left-color: var(--corail); box-shadow: 0 0 0 3px rgba(255,111,94,.25), var(--ombre); }
+.ap-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 8px; }
+.ap-head .ap-date { font-weight: 900; font-size: 1.05rem; color: var(--texte); }
+.ap-head .ap-theme { font-weight: 800; color: var(--turquoise-fonce); }
+.ap-head .ap-phase { font-size: .68rem; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: var(--abricot); color: var(--texte-doux); text-transform: uppercase; }
+.ap-head .ap-open { margin-left: auto; text-decoration: none; background: var(--corail); color: #fff; font-weight: 800; padding: 6px 14px; border-radius: 999px; font-size: .82rem; }
+.ap-chips { display: flex; flex-direction: column; gap: 6px; }
+.ap-chip { display: flex; align-items: center; gap: 8px; background: #FFF6E9; border-radius: 12px; padding: 7px 10px; font-size: .9rem; }
+.ap-chip .n { width: 22px; height: 22px; border-radius: 50%; background: var(--turquoise); color: #fff; font-weight: 900; font-size: .78rem; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
+.ap-chip .em { font-size: 1.3rem; }
+.ap-chip .ti { font-weight: 800; color: var(--texte); flex: 1; }
+.ap-chip .mode { font-size: .62rem; font-weight: 800; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.ap-chip .mode.imprimer { background: #E8F4FF; color: #2E6FB0; }
+.ap-chip .mode.ecran { background: #EAF9F0; color: #1E9C6B; }
+.ap-chip .mode.sansrien { background: #FFF1DC; color: #C77A15; }
+.ap-chip .prm { font-size: .72rem; color: var(--texte-doux); font-style: italic; }
+
+/* ============================================================
    TÉLÉPHONE (portrait étroit) — cases plus compactes, événements lisibles
    ============================================================ */
 @media (max-width: 560px) {

@@ -12,9 +12,11 @@ function iso(d) {
   return d.toISOString().slice(0, 10);
 }
 
-// Rotations pour varier les ateliers "3e" et "4e" chaque jour
-const SLOT_A = ["graphisme", "relier", "decoupage", "numeration", "graphisme", "relier", "numeration", "decoupage"];
-const SLOT_B = ["phono", "logique", "phono", "numeration", "logique", "phono", "logique", "phono"];
+// Pool des ateliers "secondaires" (hors programme + lecture).
+// Chaque jour on prend SEC_PER_DAY types DISTINCTS via une fenêtre glissante :
+// aucune répétition dans une même journée, et tous les types reviennent souvent.
+const SECONDARY = ["graphisme", "numeration", "relier", "logique", "decoupage", "phono"];
+const SEC_PER_DAY = 4; // 4 distincts + programme + lecture = 6 ateliers / jour
 const RELIER_VARIANTES = ["mot-image", "nombre-points", "image-ombre", "forme-objet"];
 const LOGIQUE_VARIANTES = ["suite", "intrus", "suite", "tri"];
 
@@ -52,15 +54,23 @@ for (let d = new Date(START + "T00:00:00Z"); iso(d) <= END; d.setUTCDate(d.getUT
   const phase = phaseOf(i);
   const theme = THEME_ORDER[i % THEME_ORDER.length];
 
-  const slotA = buildAtelier(SLOT_A[i % SLOT_A.length], i, phase);
-  const slotB = buildAtelier(SLOT_B[i % SLOT_B.length], i, phase);
+  // fenêtre glissante de 4 types distincts dans le pool des 6 secondaires
+  const offset = i % SECONDARY.length;
+  const secTypes = [];
+  for (let k = 0; k < SEC_PER_DAY; k++) secTypes.push(SECONDARY[(offset + k) % SECONDARY.length]);
 
   const ateliers = [
     { type: "programme" },
     { type: "lecture" },
-    slotA,
-    slotB
+    ...secTypes.map(t => buildAtelier(t, i, phase))
   ];
+
+  // garde-fou : aucun type en double dans la journée
+  const seen = new Set();
+  for (const a of ateliers) {
+    if (seen.has(a.type)) throw new Error("Doublon " + a.type + " le " + date);
+    seen.add(a.type);
+  }
 
   days[date] = { date, theme, phase, ateliers };
   i++;
