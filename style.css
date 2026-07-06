@@ -372,6 +372,35 @@ button { font-family: inherit; cursor: pointer; }
 .zone-print { display: none; }
 
 /* ============================================================
+   TÉLÉPHONE (portrait étroit) — cases plus compactes, événements lisibles
+   ============================================================ */
+@media (max-width: 560px) {
+  .app { padding: 10px 8px 50px; }
+  .grille { gap: 4px; }
+  .jour-nom { font-size: .6rem; padding: 2px 0; }
+  .case { min-height: 78px; padding: 4px 3px 3px; border-radius: 12px; }
+  .case .num { font-size: 1.05rem; }
+  .case .dow { font-size: .5rem; margin-top: -1px; }
+  .case .plus { width: 20px; height: 20px; font-size: .95rem; line-height: 18px; top: 2px; right: 2px; opacity: .7; }
+  .case .evts { gap: 1px; }
+  .case .evt {
+    font-size: .5rem; padding: 1px 3px; line-height: 1.1;
+    white-space: normal; overflow: hidden; gap: 2px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  }
+  .case .evt .em { font-size: .72rem; }
+  .compte { padding: 14px 14px; gap: 6px 16px; }
+  .btn { padding: 11px 16px; font-size: .95rem; }
+  .ateliers { grid-template-columns: 1fr; }
+  .choix-lettre { width: 78px; height: 78px; font-size: 2.4rem; }
+  .choix-image { width: 96px; height: 96px; font-size: 3.1rem; }
+  .num-btn { min-width: 66px; height: 72px; font-size: 2.1rem; }
+  .relier-zone { gap: 16px; }
+  .relier-tuile { font-size: 1.9rem; min-height: 62px; }
+  .relier-tuile .mot-txt { font-size: 1rem; }
+}
+
+/* ============================================================
    IMPRESSION
    ============================================================ */
 @media print {
