@@ -20,6 +20,15 @@ export function registerSpeakListener(listener: (text: string) => void) {
   globalSpeakListener = listener;
 }
 
+// Retire emojis, pictogrammes et symboles pour que le TTS ne lise QUE le texte
+// (les emojis restent affichés à l'écran via le listener ci-dessous).
+function stripEmojis(text: string): string {
+  return text
+    .replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{1F1E6}-\u{1F1FF}\u{FE00}-\u{FE0F}\u{200D}]/gu, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
 export function speak(text: string) {
   if (globalSpeakListener) {
     try {
@@ -29,10 +38,13 @@ export function speak(text: string) {
     }
   }
 
+  const spokenText = stripEmojis(text);
+  if (!spokenText) return; // rien à lire (que des emojis)
+
   if ("speechSynthesis" in window) {
     try {
       // Avoid cancel() on iOS as it freezes synthesis
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
                     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
       if (!isIOS) {
         window.speechSynthesis.cancel();
@@ -40,8 +52,8 @@ export function speak(text: string) {
     } catch (e) {
       console.warn("Cancel speech failed:", e);
     }
-    
-    const utterance = new SpeechSynthesisUtterance(text);
+
+    const utterance = new SpeechSynthesisUtterance(spokenText);
     utterance.lang = "fr-FR";
     utterance.rate = 0.85; // slightly slower for young kids
     
