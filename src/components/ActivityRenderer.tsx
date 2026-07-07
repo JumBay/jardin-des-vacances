@@ -721,75 +721,131 @@ function InteractiveContentRenderer({ type, params, themeEmoji, onComplete }: { 
 
   // RENDER PHONO (Oral and Tambour clapping assistant)
   if (type === "phono") {
-    const [tapCount, setTapCount] = useState(0);
-    const [isFinished, setIsFinished] = useState(false);
-    
-    const handleDrumTap = () => {
-      const nextCount = tapCount + 1;
-      setTapCount(nextCount);
-      speak(`TAP !`);
-      
-      if (nextCount === params.expectedClaps) {
-        setIsFinished(true);
-        speak(`SUPER ! TU AS BIEN TAPÉ ${params.expectedClaps} FOIS POUR LE MOT ${params.wordToClap} !`);
+    // Jeu des syllabes ILLUSTRÉ : l'enfant voit l'image, écoute le mot, puis
+    // tape chaque syllabe (dans l'ordre) et l'entend → il segmente et compte.
+    const words: { mot: string; emoji: string; syllables: string[] }[] =
+      Array.isArray(params.words) && params.words.length > 0
+        ? params.words
+        : [{
+            mot: params.wordToClap || "MOT",
+            emoji: params.themeEmoji || "🔊",
+            syllables: Array.from({ length: params.expectedClaps || 1 }, (_, i) => `${i + 1}`),
+          }];
+
+    const [wordIdx, setWordIdx] = useState(0);
+    const [revealed, setRevealed] = useState(0); // nb de syllabes déjà tapées
+
+    const current = words[wordIdx];
+    const isLastWord = wordIdx === words.length - 1;
+    const wordDone = revealed >= current.syllables.length;
+
+    const tapSyllable = (i: number) => {
+      if (i > revealed) return; // il faut taper les syllabes dans l'ordre
+      speak(current.syllables[i]);
+      if (i === revealed) {
+        const next = revealed + 1;
+        setRevealed(next);
+        if (next === current.syllables.length) {
+          const n = current.syllables.length;
+          setTimeout(
+            () => speak(`${current.mot}. ${current.syllables.join(". ")}. ÇA FAIT ${n} SYLLABE${n > 1 ? "S" : ""} !`),
+            450
+          );
+        }
       }
     };
 
-    const resetClaps = () => {
-      setTapCount(0);
-      setIsFinished(false);
-    };
+    const nextWord = () => { setWordIdx((w) => w + 1); setRevealed(0); };
 
     return (
       <div className="max-w-md mx-auto text-center py-4 bg-brand-cream border border-brand-apricot rounded-3xl p-6 shadow-sm">
-        <span className="text-6xl block mb-2">{params.themeEmoji}</span>
-        <h3 className="font-display font-bold text-2xl text-neutral-800 mb-2 uppercase">
-          MOT À SCANDER : <span className="text-brand-coral underline">{params.wordToClap}</span>
-        </h3>
-        <p className="text-xs text-neutral-500 font-mono uppercase tracking-widest mb-6">
-          IL Y A EN TOUT : {params.expectedClaps} SYLLABES DANS CE MOT.
+        {/* Progression des mots */}
+        <div className="flex justify-center gap-2 mb-4">
+          {words.map((_, i) => (
+            <span key={i} className={`w-3 h-3 rounded-full transition ${
+              i < wordIdx ? "bg-brand-turquoise" : i === wordIdx ? "bg-brand-coral scale-125" : "bg-neutral-200"
+            }`} />
+          ))}
+        </div>
+
+        <p className="text-sm font-bold text-neutral-600 uppercase mb-4">
+          ÉCOUTE LE MOT, PUIS TAPE CHAQUE MORCEAU 👏
         </p>
 
-        {/* Clapping Tambour */}
-        <div className="bg-white rounded-3xl p-6 border-2 border-dashed border-neutral-200 shadow-inner max-w-sm mx-auto mb-6">
+        {/* Image du mot (repère pour l'enfant qui ne lit pas encore) */}
+        <div className="bg-white rounded-3xl p-5 border-2 border-dashed border-brand-apricot shadow-inner max-w-sm mx-auto mb-4">
+          <span className="text-8xl block mb-3">{current.emoji}</span>
           <button
-            onClick={handleDrumTap}
-            disabled={isFinished}
-            className={`w-32 h-32 rounded-full bg-gradient-to-tr from-brand-yellow to-yellow-300 border-8 border-neutral-800 flex flex-col items-center justify-center shadow-lg transform active:scale-95 transition cursor-pointer mx-auto ${
-              isFinished ? "opacity-70 cursor-not-allowed animate-none" : "animate-pulse"
-            }`}
+            onClick={() => speak(current.mot)}
+            className="inline-flex items-center gap-2 bg-brand-yellow hover:bg-yellow-300 text-neutral-800 font-extrabold px-5 py-2.5 rounded-full shadow transition transform active:scale-95 cursor-pointer uppercase text-sm"
           >
-            <Drum className="w-12 h-12 text-neutral-800 mb-1" />
-            <span className="text-xs font-bold text-neutral-800 font-mono">TAPE ICI 🥁</span>
+            <Volume2 className="w-5 h-5" /> ÉCOUTER LE MOT
           </button>
 
-          {/* Scander tracker lights */}
-          <div className="flex justify-center gap-3 mt-6">
-            {Array.from({ length: params.expectedClaps }).map((_, idx) => (
-              <span
-                key={idx}
-                className={`w-6 h-6 rounded-full border-2 border-neutral-800 transition duration-300 ${
-                  tapCount > idx ? "bg-brand-coral scale-110 shadow" : "bg-neutral-100"
-                }`}
-              />
+          {/* Bulles de syllabes à taper dans l'ordre */}
+          <div className="flex flex-wrap justify-center items-center gap-2 mt-5">
+            {current.syllables.map((syl, i) => {
+              const lit = i < revealed;
+              const isNext = i === revealed;
+              return (
+                <React.Fragment key={i}>
+                  {i > 0 && <span className="text-2xl text-neutral-300 font-black">·</span>}
+                  <button
+                    onClick={() => tapSyllable(i)}
+                    disabled={i > revealed}
+                    className={`min-w-[64px] px-4 py-3 rounded-2xl font-display font-black text-xl border-4 transition transform active:scale-95 uppercase ${
+                      lit
+                        ? "bg-brand-coral text-white border-brand-coral shadow scale-105"
+                        : isNext
+                        ? "bg-white text-neutral-800 border-brand-coral animate-pulse cursor-pointer"
+                        : "bg-neutral-100 text-neutral-300 border-neutral-200 cursor-not-allowed"
+                    }`}
+                  >
+                    {syl}
+                  </button>
+                </React.Fragment>
+              );
+            })}
+          </div>
+
+          {/* Décompte des syllabes tapées */}
+          <div className="flex justify-center gap-2 mt-4">
+            {current.syllables.map((_, i) => (
+              <span key={i} className={`w-6 h-6 rounded-full border-2 border-neutral-700 flex items-center justify-center text-xs font-bold transition ${
+                i < revealed ? "bg-brand-turquoise text-white scale-110" : "bg-neutral-50 text-neutral-300"
+              }`}>👏</span>
             ))}
           </div>
         </div>
 
-        <div className="flex gap-4 justify-center">
+        {wordDone && (
+          <p className="text-lg font-display font-black text-brand-turquoise uppercase mb-3 animate-bounce-subtle">
+            {current.mot} = {current.syllables.length} SYLLABE{current.syllables.length > 1 ? "S" : ""} ! 🎉
+          </p>
+        )}
+
+        <div className="flex gap-3 justify-center">
           <button
-            onClick={resetClaps}
-            className="bg-neutral-200 hover:bg-neutral-300 text-neutral-700 text-xs font-bold px-4 py-2 rounded-xl transition cursor-pointer"
+            onClick={() => setRevealed(0)}
+            className="bg-neutral-200 hover:bg-neutral-300 text-neutral-700 text-xs font-bold px-4 py-2.5 rounded-xl transition cursor-pointer uppercase"
           >
-            RECOMMENCER
+            ↺ RECOMMENCER
           </button>
-          
-          {isFinished && (
+
+          {wordDone && !isLastWord && (
             <button
-              onClick={onComplete}
-              className="flex items-center gap-1.5 bg-brand-turquoise hover:bg-teal-400 text-white font-bold px-6 py-2 rounded-xl shadow transition text-xs cursor-pointer"
+              onClick={nextWord}
+              className="flex items-center gap-1.5 bg-brand-coral hover:bg-red-400 text-white font-bold px-6 py-2.5 rounded-xl shadow transition text-xs cursor-pointer uppercase"
             >
-              VALIDER <Check className="w-4 h-4" />
+              MOT SUIVANT <ChevronRight className="w-4 h-4" />
+            </button>
+          )}
+          {wordDone && isLastWord && (
+            <button
+              onClick={() => { speak("BRAVO ! TU AS TROUVÉ TOUTES LES SYLLABES !"); onComplete(); }}
+              className="flex items-center gap-1.5 bg-brand-turquoise hover:bg-teal-400 text-white font-bold px-6 py-2.5 rounded-xl shadow transition text-xs cursor-pointer uppercase"
+            >
+              J'AI FINI <Check className="w-4 h-4" />
             </button>
           )}
         </div>
@@ -1039,30 +1095,32 @@ function PrintContentRenderer({ type, params, themeEmoji }: { type: string; para
 
   // PRINT PHONOLOGY
   if (type === "phono") {
+    const words: { mot: string; emoji: string; syllables: string[] }[] =
+      Array.isArray(params.words) && params.words.length > 0
+        ? params.words
+        : [{ mot: params.wordToClap || "MOT", emoji: themeEmoji, syllables: Array.from({ length: params.expectedClaps || 1 }, () => "") }];
     return (
       <div className="py-8 flex-1 text-center">
-        <h2 className="text-2xl font-bold uppercase mb-2">ATELIER DU JARDIN DES PHONÈMES</h2>
-        <p className="text-sm text-neutral-400 uppercase tracking-widest mb-12">ATELIER COMPLÈTEMENT ORAL À FAIRE EN CONVERSANT EN FAMILLE</p>
-        
-        <div className="border-4 border-neutral-300 rounded-3xl p-8 max-w-xl mx-auto bg-neutral-50 text-left">
-          <h3 className="text-xl font-bold text-neutral-800 uppercase mb-4">🏠 CONSIGNES POUR LE RITUEL ORAL :</h3>
-          
-          <div className="space-y-6">
-            <div>
-              <p className="text-xs font-bold text-neutral-400 uppercase">1. LE SCANDAGE DES MOTS :</p>
-              <p className="text-base font-bold text-neutral-700 uppercase">Dites le mot '{params.wordToClap}' à voix haute. Demandez à l'enfant de frapper dans ses mains pour scander les {params.expectedClaps} syllabes. (ex : {params.wordToClap.split("").join("-")})</p>
-            </div>
-            
-            <div>
-              <p className="text-xs font-bold text-neutral-400 uppercase">2. LA CHASSE AUX RIMES :</p>
-              <p className="text-base font-bold text-neutral-700 uppercase">Trouvez ensemble des mots qui finissent par la même rime que '{params.rimeWord}'. (ex : SAPIN - COPIN - JARDIN - FIN)</p>
-            </div>
+        <h2 className="text-2xl font-bold uppercase mb-1">COMBIEN DE SYLLABES ? 👏</h2>
+        <p className="text-sm text-neutral-400 uppercase tracking-widest mb-8">REGARDE L'IMAGE, DIS LE MOT, PUIS COLORIE UN ROND POUR CHAQUE SYLLABE</p>
 
-            <div>
-              <p className="text-xs font-bold text-neutral-400 uppercase">3. DESSIN DU COMPTAGE :</p>
-              <p className="text-base font-bold text-neutral-700 uppercase">Dessinez {params.expectedClaps} ronds sur une feuille et faites-y poser {params.expectedClaps} haricots secs ou Lego en rythme.</p>
+        <div className="space-y-5 max-w-xl mx-auto">
+          {words.map((w, i) => (
+            <div key={i} className="border-4 border-neutral-300 rounded-3xl p-5 flex items-center gap-5 bg-white">
+              <span className="text-6xl flex-shrink-0">{w.emoji}</span>
+              <span className="text-2xl font-black uppercase text-neutral-800 flex-1 text-left tracking-wide">{w.mot}</span>
+              <div className="flex gap-3 flex-shrink-0">
+                {w.syllables.map((_, k) => (
+                  <span key={k} className="w-11 h-11 rounded-full border-[3px] border-neutral-700" />
+                ))}
+              </div>
             </div>
-          </div>
+          ))}
+        </div>
+
+        <div className="mt-8 border-4 border-dashed border-neutral-300 rounded-3xl p-5 max-w-xl mx-auto text-left bg-neutral-50">
+          <p className="text-xs font-bold text-neutral-400 uppercase mb-1">🏠 EN FAMILLE — LA CHASSE AUX RIMES :</p>
+          <p className="text-base font-bold text-neutral-700 uppercase">Trouvez ensemble d'autres mots qui finissent comme «&nbsp;{params.rimeWord}&nbsp;».</p>
         </div>
       </div>
     );

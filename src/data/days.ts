@@ -149,10 +149,18 @@ function atelierPhono(dateStr: string, theme: Theme): GeneratedAtelier {
     consigneParent: theme.phono.consigneParent,
     repli: "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
     params: {
+      // Mots ILLUSTRÉS avec découpage en syllabes : l'enfant (qui ne lit pas
+      // encore) reconnaît l'image, écoute le mot, puis tape chaque syllabe.
+      words: theme.mots.slice(0, 3).map((m) => ({
+        mot: m.mot,
+        emoji: m.emoji,
+        syllables: m.syllable.split("-"),
+      })),
+      rimeWord: theme.phono.rimeWord,
+      themeEmoji: theme.emoji,
+      // Conservé pour compat / fiche imprimable.
       wordToClap: theme.phono.syllablesCountWord,
       expectedClaps: theme.phono.syllablesCount,
-      rimeWord: theme.phono.rimeWord,
-      themeEmoji: theme.emoji
     }
   };
 }

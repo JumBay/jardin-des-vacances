@@ -18,6 +18,7 @@ export default function App() {
     return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
   })();
   const [selectedDay, setSelectedDay] = useState<DayData | null>(null);
+  const [autoLaunchType, setAutoLaunchType] = useState<string | null>(null);
   
   // Initialize state with LocalStorage for robust persistence
   const [completedAteliers, setCompletedAteliers] = useState<string[]>(() => {
@@ -140,12 +141,36 @@ export default function App() {
   };
 
   const handleSelectDay = (day: DayData) => {
+    setAutoLaunchType(null);
     setSelectedDay(day);
   };
 
   const handleBackToDashboard = () => {
     setSelectedDay(null);
+    setAutoLaunchType(null);
+    // Nettoie le deep-link éventuel pour ne pas ré-ouvrir l'atelier.
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
   };
+
+  // Deep-link depuis l'aperçu : #/jour/AAAA-MM-JJ[/type] ouvre le jour et,
+  // si un type est donné, lance directement l'atelier correspondant.
+  // On écoute aussi hashchange pour réagir sans rechargement complet.
+  useEffect(() => {
+    const applyHash = () => {
+      const m = window.location.hash.match(/^#\/jour\/(\d{4}-\d{2}-\d{2})(?:\/([a-z]+))?/);
+      if (!m) return;
+      const day = DAYS_DATA.find((d) => d.date === m[1]);
+      if (day) {
+        setSelectedDay(day);
+        setAutoLaunchType(m[2] || null);
+      }
+    };
+    applyHash();
+    window.addEventListener("hashchange", applyHash);
+    return () => window.removeEventListener("hashchange", applyHash);
+  }, []);
 
   const totalStars = completedAteliers.length;
 
@@ -278,6 +303,7 @@ export default function App() {
             completedAteliers={completedAteliers}
             onToggleComplete={handleToggleComplete}
             onBack={handleBackToDashboard}
+            autoLaunchType={autoLaunchType}
           />
         ) : (
           <Dashboard

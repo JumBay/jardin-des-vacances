@@ -30,7 +30,11 @@
     .head .date{font-weight:900;font-size:1.05rem}
     .head .theme{font-weight:800;color:var(--turq-f)}
     .head .open{margin-left:auto;text-decoration:none;background:var(--corail);color:#fff;font-weight:800;padding:6px 14px;border-radius:999px;font-size:.82rem}
-    .chip{display:flex;align-items:center;gap:8px;background:var(--creme);border-radius:12px;padding:7px 10px;margin-top:6px;font-size:.92rem}
+    .chip{display:flex;align-items:center;gap:8px;background:var(--creme);border-radius:12px;padding:7px 10px;margin-top:6px;font-size:.92rem;
+      text-decoration:none;color:inherit;cursor:pointer;border:2px solid transparent;transition:border-color .15s,transform .1s}
+    .chip:hover{border-color:var(--turq);transform:translateX(2px)}
+    .chip:active{transform:scale(.99)}
+    .chip .go{flex:0 0 auto;font-size:.62rem;font-weight:900;color:#fff;background:var(--turq);padding:4px 9px;border-radius:999px;white-space:nowrap}
     .chip .n{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--turq);color:#fff;font-weight:900;font-size:.78rem;display:flex;align-items:center;justify-content:center}
     .chip .ti{flex:1;font-weight:800}
     .chip .prm{display:block;font-size:.7rem;color:var(--doux);font-style:italic;font-weight:600;margin-top:1px}
@@ -67,7 +71,7 @@
         case "logique": return "suite : "+((p.pattern||[]).join(" "))+" → "+(p.correctAnswer||"?");
         case "decoupage": return "ligne : "+(p.lineType||"?");
         case "lecture": return "lettre : "+(p.targetLetter||"?");
-        case "phono": return (p.expectedClaps||"?")+" syllabes ("+(p.wordToClap||"")+")";
+        case "phono": return (p.words||[]).map(w=>w.emoji+" "+w.mot+" ("+(w.syllables||[]).join("-")+")").join(" · ") || ((p.expectedClaps||"?")+" syllabes");
         case "programme": return ((p.steps||[]).length)+" étapes";
         default: return "";
       }
@@ -90,14 +94,14 @@
         const dateTxt=`${JOURS[dt.getDay()]} ${dt.getDate()} ${MOIS[dt.getMonth()]}`;
         let chips="";
         d.ateliers.forEach((a,i)=>{
-          chips+=`<div class="chip"><span class="n">${i+1}</span><span style="font-size:1.3rem">${EM[a.type]||"•"}</span>`+
+          chips+=`<a class="chip" href="index.html#/jour/${d.date}/${a.type}" title="Tester cette activité"><span class="n">${i+1}</span><span style="font-size:1.3rem">${EM[a.type]||"•"}</span>`+
             `<span class="ti">${esc(a.titre)}<span class="prm">${esc(pSum(a))}</span></span>`+
-            `<span class="mode ${modeCls(a.mode)}">${esc(a.mode)}</span></div>`;
+            `<span class="mode ${modeCls(a.mode)}">${esc(a.mode)}</span><span class="go">▶ TESTER</span></a>`;
         });
         html+=`<div class="jour ${auj?"auj":""}" id="${d.date}">
           <div class="head"><span class="date">${auj?"⭐ ":""}${dateTxt}</span>
           <span class="theme">${d.themeEmoji} ${esc(d.themeNom)}</span>
-          <a class="open" href="index.html">OUVRIR ▶</a></div>${chips}</div>`;
+          <a class="open" href="index.html#/jour/${d.date}">OUVRIR ▶</a></div>${chips}</div>`;
       }
       document.getElementById("liste").innerHTML=html;
       const h=location.hash.replace(/^#/,""); if(h&&document.getElementById(h))document.getElementById(h).scrollIntoView();

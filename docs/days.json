@@ -200,10 +200,36 @@
         "consigneParent": "Prononcez les mots en insistant sur chaque syllabe. Faites frapper dans les mains : MO-U-TON (2 syllabes réelles à l'oral: MOU-TON).",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "MOUTON",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "VACHE",
+              "emoji": "🐄",
+              "syllables": [
+                "VA",
+                "CHE"
+              ]
+            },
+            {
+              "mot": "POULE",
+              "emoji": "🐔",
+              "syllables": [
+                "POU",
+                "LE"
+              ]
+            },
+            {
+              "mot": "COCHON",
+              "emoji": "🐖",
+              "syllables": [
+                "CO",
+                "CHON"
+              ]
+            }
+          ],
           "rimeWord": "LAPIN",
-          "themeEmoji": "🚜"
+          "themeEmoji": "🚜",
+          "wordToClap": "MOUTON",
+          "expectedClaps": 2
         }
       }
     ]
@@ -409,10 +435,36 @@
         "consigneParent": "Demandez à l'enfant d'insister sur le son L: 'LLLL-ION'. Demandez-lui s'il entend ce son dans 'LUNE' ou 'BALLE'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "GIRAFE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "LION",
+              "emoji": "🦁",
+              "syllables": [
+                "LI",
+                "ON"
+              ]
+            },
+            {
+              "mot": "TIGRE",
+              "emoji": "🐯",
+              "syllables": [
+                "TI",
+                "GRE"
+              ]
+            },
+            {
+              "mot": "SINGE",
+              "emoji": "🐒",
+              "syllables": [
+                "SIN",
+                "GE"
+              ]
+            }
+          ],
           "rimeWord": "SINGE",
-          "themeEmoji": "🦁"
+          "themeEmoji": "🦁",
+          "wordToClap": "GIRAFE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -618,10 +670,36 @@
         "consigneParent": "Travaillez sur la rime en 'ER'. Proposez: 'FER', 'TERRE', 'CHAIR'. Faites rimer les mots.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "BALEINE",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "POISSON",
+              "emoji": "🐟",
+              "syllables": [
+                "POIS",
+                "SON"
+              ]
+            },
+            {
+              "mot": "CRABE",
+              "emoji": "🦀",
+              "syllables": [
+                "CRA",
+                "BE"
+              ]
+            },
+            {
+              "mot": "REQUIN",
+              "emoji": "🦈",
+              "syllables": [
+                "RE",
+                "QUIN"
+              ]
+            }
+          ],
           "rimeWord": "CRABE",
-          "themeEmoji": "🐟"
+          "themeEmoji": "🐟",
+          "wordToClap": "BALEINE",
+          "expectedClaps": 2
         }
       }
     ]
@@ -827,10 +905,36 @@
         "consigneParent": "Prononcez lentement : ÉÉÉ-SCARGOT. Demandez s'il commence comme ÉCOLE, ÉTOILE ou ANANAS.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "ESCARGOT",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "FLEUR",
+              "emoji": "🌻",
+              "syllables": [
+                "FLEUR"
+              ]
+            },
+            {
+              "mot": "ARBRE",
+              "emoji": "🌳",
+              "syllables": [
+                "AR",
+                "BRE"
+              ]
+            },
+            {
+              "mot": "ARROSOIR",
+              "emoji": "🚿",
+              "syllables": [
+                "AR",
+                "RO",
+                "SOIR"
+              ]
+            }
+          ],
           "rimeWord": "FLEUR",
-          "themeEmoji": "🌻"
+          "themeEmoji": "🌻",
+          "wordToClap": "ESCARGOT",
+          "expectedClaps": 3
         }
       }
     ]
@@ -1036,10 +1140,38 @@
         "consigneParent": "Demandez à l'enfant d'exagérer la fin : FRAI-ZZZZ. Est-ce que ça rime avec VALISE, CERISE, CHEMISE ?",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "BANANE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "FRAISE",
+              "emoji": "🍓",
+              "syllables": [
+                "FRAI",
+                "SE"
+              ]
+            },
+            {
+              "mot": "BANANE",
+              "emoji": "🍌",
+              "syllables": [
+                "BA",
+                "NA",
+                "NE"
+              ]
+            },
+            {
+              "mot": "CERISE",
+              "emoji": "🍒",
+              "syllables": [
+                "CE",
+                "RI",
+                "SE"
+              ]
+            }
+          ],
           "rimeWord": "POIRE",
-          "themeEmoji": "🍎"
+          "themeEmoji": "🍎",
+          "wordToClap": "BANANE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -1245,10 +1377,35 @@
         "consigneParent": "Faites vibrer les lèvres : VVVVV-ÉLO. Comparez avec 'BÉBÉ' pour montrer la différence entre le V et le B.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "VOITURE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "TRAIN",
+              "emoji": "🚆",
+              "syllables": [
+                "TRAIN"
+              ]
+            },
+            {
+              "mot": "AVION",
+              "emoji": "✈️",
+              "syllables": [
+                "A",
+                "VION"
+              ]
+            },
+            {
+              "mot": "VELO",
+              "emoji": "🚲",
+              "syllables": [
+                "VÉ",
+                "LO"
+              ]
+            }
+          ],
           "rimeWord": "TRAIN",
-          "themeEmoji": "🚀"
+          "themeEmoji": "🚀",
+          "wordToClap": "VOITURE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -1454,10 +1611,36 @@
         "consigneParent": "Prononcez 'K-K-CLOWN'. Demandez d'autres mots commençant par ce son, comme 'CRABE' ou 'CAROTTE'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "CHAPITEAU",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "CLOWN",
+              "emoji": "🤡",
+              "syllables": [
+                "CLOWN"
+              ]
+            },
+            {
+              "mot": "BALLON",
+              "emoji": "🎈",
+              "syllables": [
+                "BAL",
+                "LON"
+              ]
+            },
+            {
+              "mot": "CHAPITEAU",
+              "emoji": "🎪",
+              "syllables": [
+                "CHA",
+                "PI",
+                "TEAU"
+              ]
+            }
+          ],
           "rimeWord": "BALLON",
-          "themeEmoji": "🎪"
+          "themeEmoji": "🎪",
+          "wordToClap": "CHAPITEAU",
+          "expectedClaps": 3
         }
       }
     ]
@@ -1663,10 +1846,38 @@
         "consigneParent": "Faites scander : LU-NE. C'est idéal pour la conscience phonologique. Demandez si ça rime avec 'DUNE'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "PLANETE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "FUSEE",
+              "emoji": "🚀",
+              "syllables": [
+                "FU",
+                "SÉE"
+              ]
+            },
+            {
+              "mot": "PLANETE",
+              "emoji": "🪐",
+              "syllables": [
+                "PLA",
+                "NÈ",
+                "TE"
+              ]
+            },
+            {
+              "mot": "ETOILE",
+              "emoji": "⭐",
+              "syllables": [
+                "É",
+                "TOI",
+                "LE"
+              ]
+            }
+          ],
           "rimeWord": "LUNE",
-          "themeEmoji": "🚀"
+          "themeEmoji": "🚀",
+          "wordToClap": "PLANETE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -1872,10 +2083,35 @@
         "consigneParent": "Prononcez : DDD-INO. Demandez-lui s'il commence comme 'DOUCHE' ou 'DORLOTER'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "VOLCAN",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "DINO",
+              "emoji": "🦖",
+              "syllables": [
+                "DI",
+                "NO"
+              ]
+            },
+            {
+              "mot": "OEUF",
+              "emoji": "🥚",
+              "syllables": [
+                "OEUF"
+              ]
+            },
+            {
+              "mot": "VOLCAN",
+              "emoji": "🌋",
+              "syllables": [
+                "VOL",
+                "CAN"
+              ]
+            }
+          ],
           "rimeWord": "OEUF",
-          "themeEmoji": "🦖"
+          "themeEmoji": "🦖",
+          "wordToClap": "VOLCAN",
+          "expectedClaps": 2
         }
       }
     ]
@@ -2081,10 +2317,36 @@
         "consigneParent": "Faites taper : CHÂ-TEAU. Demandez s'il entend le son 'O' à la fin du mot.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "COURONNE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "CHATEAU",
+              "emoji": "🏰",
+              "syllables": [
+                "CHÂ",
+                "TEAU"
+              ]
+            },
+            {
+              "mot": "PRINCE",
+              "emoji": "🤴",
+              "syllables": [
+                "PRIN",
+                "CE"
+              ]
+            },
+            {
+              "mot": "REINE",
+              "emoji": "👸",
+              "syllables": [
+                "REI",
+                "NE"
+              ]
+            }
+          ],
           "rimeWord": "ROI",
-          "themeEmoji": "👑"
+          "themeEmoji": "👑",
+          "wordToClap": "COURONNE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -2290,10 +2552,34 @@
         "consigneParent": "Faites le son 'MMMMM' avec la bouche fermée. Cherchez ensemble d'autres mots comme 'MAMAN' ou 'MOUTON'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "BOUCHE",
-          "expectedClaps": 1,
+          "words": [
+            {
+              "mot": "TETE",
+              "emoji": "🧑",
+              "syllables": [
+                "TÊ",
+                "TE"
+              ]
+            },
+            {
+              "mot": "BRAS",
+              "emoji": "💪",
+              "syllables": [
+                "BRAS"
+              ]
+            },
+            {
+              "mot": "MAIN",
+              "emoji": "✋",
+              "syllables": [
+                "MAIN"
+              ]
+            }
+          ],
           "rimeWord": "NEZ",
-          "themeEmoji": "👣"
+          "themeEmoji": "👣",
+          "wordToClap": "BOUCHE",
+          "expectedClaps": 1
         }
       }
     ]
@@ -2499,10 +2785,35 @@
         "consigneParent": "Faites le son du serpent : SSSSS. Demandez si ça commence comme 'SABLE', 'SINGE' ou 'TRACTEUR'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "NUAGE",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "SOLEIL",
+              "emoji": "☀️",
+              "syllables": [
+                "SO",
+                "LEIL"
+              ]
+            },
+            {
+              "mot": "PLUIE",
+              "emoji": "🌧️",
+              "syllables": [
+                "PLUIE"
+              ]
+            },
+            {
+              "mot": "NUAGE",
+              "emoji": "☁️",
+              "syllables": [
+                "NUA",
+                "GE"
+              ]
+            }
+          ],
           "rimeWord": "VENT",
-          "themeEmoji": "☀️"
+          "themeEmoji": "☀️",
+          "wordToClap": "NUAGE",
+          "expectedClaps": 2
         }
       }
     ]
@@ -2708,10 +3019,37 @@
         "consigneParent": "Faites scander : PA-PIL-LON. Demandez de trouver d'autres mots avec 3 syllabes (ex. ARROSOIR).",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "FOURMI",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "FOURMI",
+              "emoji": "🐜",
+              "syllables": [
+                "FOUR",
+                "MI"
+              ]
+            },
+            {
+              "mot": "ABEILLE",
+              "emoji": "🐝",
+              "syllables": [
+                "A",
+                "BEIL",
+                "LE"
+              ]
+            },
+            {
+              "mot": "MOUCHE",
+              "emoji": "🪰",
+              "syllables": [
+                "MOU",
+                "CHE"
+              ]
+            }
+          ],
           "rimeWord": "MOUCHE",
-          "themeEmoji": "🐞"
+          "themeEmoji": "🐞",
+          "wordToClap": "FOURMI",
+          "expectedClaps": 2
         }
       }
     ]
@@ -2917,10 +3255,37 @@
         "consigneParent": "Prononcez : TTT-AMBOUR. Entend-on le même son dans 'TRACTEUR' ou dans 'MOUTON' (au début) ?",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "GUITARE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "PIANO",
+              "emoji": "🎹",
+              "syllables": [
+                "PIA",
+                "NO"
+              ]
+            },
+            {
+              "mot": "GUITARE",
+              "emoji": "🎸",
+              "syllables": [
+                "GUI",
+                "TA",
+                "RE"
+              ]
+            },
+            {
+              "mot": "FLUTE",
+              "emoji": "🪈",
+              "syllables": [
+                "FLÛ",
+                "TE"
+              ]
+            }
+          ],
           "rimeWord": "CHANT",
-          "themeEmoji": "🎵"
+          "themeEmoji": "🎵",
+          "wordToClap": "GUITARE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -3126,10 +3491,36 @@
         "consigneParent": "Faites gratter la gorge : RRRR-OND. Comparez avec 'REINE' ou 'ROSE' pour renforcer.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "TRIANGLE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "ROND",
+              "emoji": "🔴",
+              "syllables": [
+                "ROND"
+              ]
+            },
+            {
+              "mot": "CARRE",
+              "emoji": "🟦",
+              "syllables": [
+                "CAR",
+                "RÉ"
+              ]
+            },
+            {
+              "mot": "TRIANGLE",
+              "emoji": "🔺",
+              "syllables": [
+                "TRI",
+                "AN",
+                "GLE"
+              ]
+            }
+          ],
           "rimeWord": "COEUR",
-          "themeEmoji": "🎨"
+          "themeEmoji": "🎨",
+          "wordToClap": "TRIANGLE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -3335,10 +3726,36 @@
         "consigneParent": "Prononcez les mots en insistant sur chaque syllabe. Faites frapper dans les mains : MO-U-TON (2 syllabes réelles à l'oral: MOU-TON).",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "MOUTON",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "VACHE",
+              "emoji": "🐄",
+              "syllables": [
+                "VA",
+                "CHE"
+              ]
+            },
+            {
+              "mot": "POULE",
+              "emoji": "🐔",
+              "syllables": [
+                "POU",
+                "LE"
+              ]
+            },
+            {
+              "mot": "COCHON",
+              "emoji": "🐖",
+              "syllables": [
+                "CO",
+                "CHON"
+              ]
+            }
+          ],
           "rimeWord": "LAPIN",
-          "themeEmoji": "🚜"
+          "themeEmoji": "🚜",
+          "wordToClap": "MOUTON",
+          "expectedClaps": 2
         }
       }
     ]
@@ -3544,10 +3961,36 @@
         "consigneParent": "Demandez à l'enfant d'insister sur le son L: 'LLLL-ION'. Demandez-lui s'il entend ce son dans 'LUNE' ou 'BALLE'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "GIRAFE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "LION",
+              "emoji": "🦁",
+              "syllables": [
+                "LI",
+                "ON"
+              ]
+            },
+            {
+              "mot": "TIGRE",
+              "emoji": "🐯",
+              "syllables": [
+                "TI",
+                "GRE"
+              ]
+            },
+            {
+              "mot": "SINGE",
+              "emoji": "🐒",
+              "syllables": [
+                "SIN",
+                "GE"
+              ]
+            }
+          ],
           "rimeWord": "SINGE",
-          "themeEmoji": "🦁"
+          "themeEmoji": "🦁",
+          "wordToClap": "GIRAFE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -3753,10 +4196,36 @@
         "consigneParent": "Travaillez sur la rime en 'ER'. Proposez: 'FER', 'TERRE', 'CHAIR'. Faites rimer les mots.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "BALEINE",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "POISSON",
+              "emoji": "🐟",
+              "syllables": [
+                "POIS",
+                "SON"
+              ]
+            },
+            {
+              "mot": "CRABE",
+              "emoji": "🦀",
+              "syllables": [
+                "CRA",
+                "BE"
+              ]
+            },
+            {
+              "mot": "REQUIN",
+              "emoji": "🦈",
+              "syllables": [
+                "RE",
+                "QUIN"
+              ]
+            }
+          ],
           "rimeWord": "CRABE",
-          "themeEmoji": "🐟"
+          "themeEmoji": "🐟",
+          "wordToClap": "BALEINE",
+          "expectedClaps": 2
         }
       }
     ]
@@ -3962,10 +4431,36 @@
         "consigneParent": "Prononcez lentement : ÉÉÉ-SCARGOT. Demandez s'il commence comme ÉCOLE, ÉTOILE ou ANANAS.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "ESCARGOT",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "FLEUR",
+              "emoji": "🌻",
+              "syllables": [
+                "FLEUR"
+              ]
+            },
+            {
+              "mot": "ARBRE",
+              "emoji": "🌳",
+              "syllables": [
+                "AR",
+                "BRE"
+              ]
+            },
+            {
+              "mot": "ARROSOIR",
+              "emoji": "🚿",
+              "syllables": [
+                "AR",
+                "RO",
+                "SOIR"
+              ]
+            }
+          ],
           "rimeWord": "FLEUR",
-          "themeEmoji": "🌻"
+          "themeEmoji": "🌻",
+          "wordToClap": "ESCARGOT",
+          "expectedClaps": 3
         }
       }
     ]
@@ -4171,10 +4666,38 @@
         "consigneParent": "Demandez à l'enfant d'exagérer la fin : FRAI-ZZZZ. Est-ce que ça rime avec VALISE, CERISE, CHEMISE ?",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "BANANE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "FRAISE",
+              "emoji": "🍓",
+              "syllables": [
+                "FRAI",
+                "SE"
+              ]
+            },
+            {
+              "mot": "BANANE",
+              "emoji": "🍌",
+              "syllables": [
+                "BA",
+                "NA",
+                "NE"
+              ]
+            },
+            {
+              "mot": "CERISE",
+              "emoji": "🍒",
+              "syllables": [
+                "CE",
+                "RI",
+                "SE"
+              ]
+            }
+          ],
           "rimeWord": "POIRE",
-          "themeEmoji": "🍎"
+          "themeEmoji": "🍎",
+          "wordToClap": "BANANE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -4380,10 +4903,35 @@
         "consigneParent": "Faites vibrer les lèvres : VVVVV-ÉLO. Comparez avec 'BÉBÉ' pour montrer la différence entre le V et le B.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "VOITURE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "TRAIN",
+              "emoji": "🚆",
+              "syllables": [
+                "TRAIN"
+              ]
+            },
+            {
+              "mot": "AVION",
+              "emoji": "✈️",
+              "syllables": [
+                "A",
+                "VION"
+              ]
+            },
+            {
+              "mot": "VELO",
+              "emoji": "🚲",
+              "syllables": [
+                "VÉ",
+                "LO"
+              ]
+            }
+          ],
           "rimeWord": "TRAIN",
-          "themeEmoji": "🚀"
+          "themeEmoji": "🚀",
+          "wordToClap": "VOITURE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -4597,10 +5145,36 @@
         "consigneParent": "Prononcez 'K-K-CLOWN'. Demandez d'autres mots commençant par ce son, comme 'CRABE' ou 'CAROTTE'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "CHAPITEAU",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "CLOWN",
+              "emoji": "🤡",
+              "syllables": [
+                "CLOWN"
+              ]
+            },
+            {
+              "mot": "BALLON",
+              "emoji": "🎈",
+              "syllables": [
+                "BAL",
+                "LON"
+              ]
+            },
+            {
+              "mot": "CHAPITEAU",
+              "emoji": "🎪",
+              "syllables": [
+                "CHA",
+                "PI",
+                "TEAU"
+              ]
+            }
+          ],
           "rimeWord": "BALLON",
-          "themeEmoji": "🎪"
+          "themeEmoji": "🎪",
+          "wordToClap": "CHAPITEAU",
+          "expectedClaps": 3
         }
       }
     ]
@@ -4814,10 +5388,38 @@
         "consigneParent": "Faites scander : LU-NE. C'est idéal pour la conscience phonologique. Demandez si ça rime avec 'DUNE'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "PLANETE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "FUSEE",
+              "emoji": "🚀",
+              "syllables": [
+                "FU",
+                "SÉE"
+              ]
+            },
+            {
+              "mot": "PLANETE",
+              "emoji": "🪐",
+              "syllables": [
+                "PLA",
+                "NÈ",
+                "TE"
+              ]
+            },
+            {
+              "mot": "ETOILE",
+              "emoji": "⭐",
+              "syllables": [
+                "É",
+                "TOI",
+                "LE"
+              ]
+            }
+          ],
           "rimeWord": "LUNE",
-          "themeEmoji": "🚀"
+          "themeEmoji": "🚀",
+          "wordToClap": "PLANETE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -5031,10 +5633,35 @@
         "consigneParent": "Prononcez : DDD-INO. Demandez-lui s'il commence comme 'DOUCHE' ou 'DORLOTER'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "VOLCAN",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "DINO",
+              "emoji": "🦖",
+              "syllables": [
+                "DI",
+                "NO"
+              ]
+            },
+            {
+              "mot": "OEUF",
+              "emoji": "🥚",
+              "syllables": [
+                "OEUF"
+              ]
+            },
+            {
+              "mot": "VOLCAN",
+              "emoji": "🌋",
+              "syllables": [
+                "VOL",
+                "CAN"
+              ]
+            }
+          ],
           "rimeWord": "OEUF",
-          "themeEmoji": "🦖"
+          "themeEmoji": "🦖",
+          "wordToClap": "VOLCAN",
+          "expectedClaps": 2
         }
       }
     ]
@@ -5248,10 +5875,36 @@
         "consigneParent": "Faites taper : CHÂ-TEAU. Demandez s'il entend le son 'O' à la fin du mot.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "COURONNE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "CHATEAU",
+              "emoji": "🏰",
+              "syllables": [
+                "CHÂ",
+                "TEAU"
+              ]
+            },
+            {
+              "mot": "PRINCE",
+              "emoji": "🤴",
+              "syllables": [
+                "PRIN",
+                "CE"
+              ]
+            },
+            {
+              "mot": "REINE",
+              "emoji": "👸",
+              "syllables": [
+                "REI",
+                "NE"
+              ]
+            }
+          ],
           "rimeWord": "ROI",
-          "themeEmoji": "👑"
+          "themeEmoji": "👑",
+          "wordToClap": "COURONNE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -5465,10 +6118,34 @@
         "consigneParent": "Faites le son 'MMMMM' avec la bouche fermée. Cherchez ensemble d'autres mots comme 'MAMAN' ou 'MOUTON'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "BOUCHE",
-          "expectedClaps": 1,
+          "words": [
+            {
+              "mot": "TETE",
+              "emoji": "🧑",
+              "syllables": [
+                "TÊ",
+                "TE"
+              ]
+            },
+            {
+              "mot": "BRAS",
+              "emoji": "💪",
+              "syllables": [
+                "BRAS"
+              ]
+            },
+            {
+              "mot": "MAIN",
+              "emoji": "✋",
+              "syllables": [
+                "MAIN"
+              ]
+            }
+          ],
           "rimeWord": "NEZ",
-          "themeEmoji": "👣"
+          "themeEmoji": "👣",
+          "wordToClap": "BOUCHE",
+          "expectedClaps": 1
         }
       }
     ]
@@ -5682,10 +6359,35 @@
         "consigneParent": "Faites le son du serpent : SSSSS. Demandez si ça commence comme 'SABLE', 'SINGE' ou 'TRACTEUR'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "NUAGE",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "SOLEIL",
+              "emoji": "☀️",
+              "syllables": [
+                "SO",
+                "LEIL"
+              ]
+            },
+            {
+              "mot": "PLUIE",
+              "emoji": "🌧️",
+              "syllables": [
+                "PLUIE"
+              ]
+            },
+            {
+              "mot": "NUAGE",
+              "emoji": "☁️",
+              "syllables": [
+                "NUA",
+                "GE"
+              ]
+            }
+          ],
           "rimeWord": "VENT",
-          "themeEmoji": "☀️"
+          "themeEmoji": "☀️",
+          "wordToClap": "NUAGE",
+          "expectedClaps": 2
         }
       }
     ]
@@ -5899,10 +6601,37 @@
         "consigneParent": "Faites scander : PA-PIL-LON. Demandez de trouver d'autres mots avec 3 syllabes (ex. ARROSOIR).",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "FOURMI",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "FOURMI",
+              "emoji": "🐜",
+              "syllables": [
+                "FOUR",
+                "MI"
+              ]
+            },
+            {
+              "mot": "ABEILLE",
+              "emoji": "🐝",
+              "syllables": [
+                "A",
+                "BEIL",
+                "LE"
+              ]
+            },
+            {
+              "mot": "MOUCHE",
+              "emoji": "🪰",
+              "syllables": [
+                "MOU",
+                "CHE"
+              ]
+            }
+          ],
           "rimeWord": "MOUCHE",
-          "themeEmoji": "🐞"
+          "themeEmoji": "🐞",
+          "wordToClap": "FOURMI",
+          "expectedClaps": 2
         }
       }
     ]
@@ -6116,10 +6845,37 @@
         "consigneParent": "Prononcez : TTT-AMBOUR. Entend-on le même son dans 'TRACTEUR' ou dans 'MOUTON' (au début) ?",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "GUITARE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "PIANO",
+              "emoji": "🎹",
+              "syllables": [
+                "PIA",
+                "NO"
+              ]
+            },
+            {
+              "mot": "GUITARE",
+              "emoji": "🎸",
+              "syllables": [
+                "GUI",
+                "TA",
+                "RE"
+              ]
+            },
+            {
+              "mot": "FLUTE",
+              "emoji": "🪈",
+              "syllables": [
+                "FLÛ",
+                "TE"
+              ]
+            }
+          ],
           "rimeWord": "CHANT",
-          "themeEmoji": "🎵"
+          "themeEmoji": "🎵",
+          "wordToClap": "GUITARE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -6333,10 +7089,36 @@
         "consigneParent": "Faites gratter la gorge : RRRR-OND. Comparez avec 'REINE' ou 'ROSE' pour renforcer.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "TRIANGLE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "ROND",
+              "emoji": "🔴",
+              "syllables": [
+                "ROND"
+              ]
+            },
+            {
+              "mot": "CARRE",
+              "emoji": "🟦",
+              "syllables": [
+                "CAR",
+                "RÉ"
+              ]
+            },
+            {
+              "mot": "TRIANGLE",
+              "emoji": "🔺",
+              "syllables": [
+                "TRI",
+                "AN",
+                "GLE"
+              ]
+            }
+          ],
           "rimeWord": "COEUR",
-          "themeEmoji": "🎨"
+          "themeEmoji": "🎨",
+          "wordToClap": "TRIANGLE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -6550,10 +7332,36 @@
         "consigneParent": "Prononcez les mots en insistant sur chaque syllabe. Faites frapper dans les mains : MO-U-TON (2 syllabes réelles à l'oral: MOU-TON).",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "MOUTON",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "VACHE",
+              "emoji": "🐄",
+              "syllables": [
+                "VA",
+                "CHE"
+              ]
+            },
+            {
+              "mot": "POULE",
+              "emoji": "🐔",
+              "syllables": [
+                "POU",
+                "LE"
+              ]
+            },
+            {
+              "mot": "COCHON",
+              "emoji": "🐖",
+              "syllables": [
+                "CO",
+                "CHON"
+              ]
+            }
+          ],
           "rimeWord": "LAPIN",
-          "themeEmoji": "🚜"
+          "themeEmoji": "🚜",
+          "wordToClap": "MOUTON",
+          "expectedClaps": 2
         }
       }
     ]
@@ -6767,10 +7575,36 @@
         "consigneParent": "Demandez à l'enfant d'insister sur le son L: 'LLLL-ION'. Demandez-lui s'il entend ce son dans 'LUNE' ou 'BALLE'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "GIRAFE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "LION",
+              "emoji": "🦁",
+              "syllables": [
+                "LI",
+                "ON"
+              ]
+            },
+            {
+              "mot": "TIGRE",
+              "emoji": "🐯",
+              "syllables": [
+                "TI",
+                "GRE"
+              ]
+            },
+            {
+              "mot": "SINGE",
+              "emoji": "🐒",
+              "syllables": [
+                "SIN",
+                "GE"
+              ]
+            }
+          ],
           "rimeWord": "SINGE",
-          "themeEmoji": "🦁"
+          "themeEmoji": "🦁",
+          "wordToClap": "GIRAFE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -6984,10 +7818,36 @@
         "consigneParent": "Travaillez sur la rime en 'ER'. Proposez: 'FER', 'TERRE', 'CHAIR'. Faites rimer les mots.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "BALEINE",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "POISSON",
+              "emoji": "🐟",
+              "syllables": [
+                "POIS",
+                "SON"
+              ]
+            },
+            {
+              "mot": "CRABE",
+              "emoji": "🦀",
+              "syllables": [
+                "CRA",
+                "BE"
+              ]
+            },
+            {
+              "mot": "REQUIN",
+              "emoji": "🦈",
+              "syllables": [
+                "RE",
+                "QUIN"
+              ]
+            }
+          ],
           "rimeWord": "CRABE",
-          "themeEmoji": "🐟"
+          "themeEmoji": "🐟",
+          "wordToClap": "BALEINE",
+          "expectedClaps": 2
         }
       }
     ]
@@ -7201,10 +8061,36 @@
         "consigneParent": "Prononcez lentement : ÉÉÉ-SCARGOT. Demandez s'il commence comme ÉCOLE, ÉTOILE ou ANANAS.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "ESCARGOT",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "FLEUR",
+              "emoji": "🌻",
+              "syllables": [
+                "FLEUR"
+              ]
+            },
+            {
+              "mot": "ARBRE",
+              "emoji": "🌳",
+              "syllables": [
+                "AR",
+                "BRE"
+              ]
+            },
+            {
+              "mot": "ARROSOIR",
+              "emoji": "🚿",
+              "syllables": [
+                "AR",
+                "RO",
+                "SOIR"
+              ]
+            }
+          ],
           "rimeWord": "FLEUR",
-          "themeEmoji": "🌻"
+          "themeEmoji": "🌻",
+          "wordToClap": "ESCARGOT",
+          "expectedClaps": 3
         }
       }
     ]
@@ -7418,10 +8304,38 @@
         "consigneParent": "Demandez à l'enfant d'exagérer la fin : FRAI-ZZZZ. Est-ce que ça rime avec VALISE, CERISE, CHEMISE ?",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "BANANE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "FRAISE",
+              "emoji": "🍓",
+              "syllables": [
+                "FRAI",
+                "SE"
+              ]
+            },
+            {
+              "mot": "BANANE",
+              "emoji": "🍌",
+              "syllables": [
+                "BA",
+                "NA",
+                "NE"
+              ]
+            },
+            {
+              "mot": "CERISE",
+              "emoji": "🍒",
+              "syllables": [
+                "CE",
+                "RI",
+                "SE"
+              ]
+            }
+          ],
           "rimeWord": "POIRE",
-          "themeEmoji": "🍎"
+          "themeEmoji": "🍎",
+          "wordToClap": "BANANE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -7635,10 +8549,35 @@
         "consigneParent": "Faites vibrer les lèvres : VVVVV-ÉLO. Comparez avec 'BÉBÉ' pour montrer la différence entre le V et le B.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "VOITURE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "TRAIN",
+              "emoji": "🚆",
+              "syllables": [
+                "TRAIN"
+              ]
+            },
+            {
+              "mot": "AVION",
+              "emoji": "✈️",
+              "syllables": [
+                "A",
+                "VION"
+              ]
+            },
+            {
+              "mot": "VELO",
+              "emoji": "🚲",
+              "syllables": [
+                "VÉ",
+                "LO"
+              ]
+            }
+          ],
           "rimeWord": "TRAIN",
-          "themeEmoji": "🚀"
+          "themeEmoji": "🚀",
+          "wordToClap": "VOITURE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -7852,10 +8791,36 @@
         "consigneParent": "Prononcez 'K-K-CLOWN'. Demandez d'autres mots commençant par ce son, comme 'CRABE' ou 'CAROTTE'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "CHAPITEAU",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "CLOWN",
+              "emoji": "🤡",
+              "syllables": [
+                "CLOWN"
+              ]
+            },
+            {
+              "mot": "BALLON",
+              "emoji": "🎈",
+              "syllables": [
+                "BAL",
+                "LON"
+              ]
+            },
+            {
+              "mot": "CHAPITEAU",
+              "emoji": "🎪",
+              "syllables": [
+                "CHA",
+                "PI",
+                "TEAU"
+              ]
+            }
+          ],
           "rimeWord": "BALLON",
-          "themeEmoji": "🎪"
+          "themeEmoji": "🎪",
+          "wordToClap": "CHAPITEAU",
+          "expectedClaps": 3
         }
       }
     ]
@@ -8069,10 +9034,38 @@
         "consigneParent": "Faites scander : LU-NE. C'est idéal pour la conscience phonologique. Demandez si ça rime avec 'DUNE'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "PLANETE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "FUSEE",
+              "emoji": "🚀",
+              "syllables": [
+                "FU",
+                "SÉE"
+              ]
+            },
+            {
+              "mot": "PLANETE",
+              "emoji": "🪐",
+              "syllables": [
+                "PLA",
+                "NÈ",
+                "TE"
+              ]
+            },
+            {
+              "mot": "ETOILE",
+              "emoji": "⭐",
+              "syllables": [
+                "É",
+                "TOI",
+                "LE"
+              ]
+            }
+          ],
           "rimeWord": "LUNE",
-          "themeEmoji": "🚀"
+          "themeEmoji": "🚀",
+          "wordToClap": "PLANETE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -8286,10 +9279,35 @@
         "consigneParent": "Prononcez : DDD-INO. Demandez-lui s'il commence comme 'DOUCHE' ou 'DORLOTER'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "VOLCAN",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "DINO",
+              "emoji": "🦖",
+              "syllables": [
+                "DI",
+                "NO"
+              ]
+            },
+            {
+              "mot": "OEUF",
+              "emoji": "🥚",
+              "syllables": [
+                "OEUF"
+              ]
+            },
+            {
+              "mot": "VOLCAN",
+              "emoji": "🌋",
+              "syllables": [
+                "VOL",
+                "CAN"
+              ]
+            }
+          ],
           "rimeWord": "OEUF",
-          "themeEmoji": "🦖"
+          "themeEmoji": "🦖",
+          "wordToClap": "VOLCAN",
+          "expectedClaps": 2
         }
       }
     ]
@@ -8503,10 +9521,36 @@
         "consigneParent": "Faites taper : CHÂ-TEAU. Demandez s'il entend le son 'O' à la fin du mot.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "COURONNE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "CHATEAU",
+              "emoji": "🏰",
+              "syllables": [
+                "CHÂ",
+                "TEAU"
+              ]
+            },
+            {
+              "mot": "PRINCE",
+              "emoji": "🤴",
+              "syllables": [
+                "PRIN",
+                "CE"
+              ]
+            },
+            {
+              "mot": "REINE",
+              "emoji": "👸",
+              "syllables": [
+                "REI",
+                "NE"
+              ]
+            }
+          ],
           "rimeWord": "ROI",
-          "themeEmoji": "👑"
+          "themeEmoji": "👑",
+          "wordToClap": "COURONNE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -8720,10 +9764,34 @@
         "consigneParent": "Faites le son 'MMMMM' avec la bouche fermée. Cherchez ensemble d'autres mots comme 'MAMAN' ou 'MOUTON'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "BOUCHE",
-          "expectedClaps": 1,
+          "words": [
+            {
+              "mot": "TETE",
+              "emoji": "🧑",
+              "syllables": [
+                "TÊ",
+                "TE"
+              ]
+            },
+            {
+              "mot": "BRAS",
+              "emoji": "💪",
+              "syllables": [
+                "BRAS"
+              ]
+            },
+            {
+              "mot": "MAIN",
+              "emoji": "✋",
+              "syllables": [
+                "MAIN"
+              ]
+            }
+          ],
           "rimeWord": "NEZ",
-          "themeEmoji": "👣"
+          "themeEmoji": "👣",
+          "wordToClap": "BOUCHE",
+          "expectedClaps": 1
         }
       }
     ]
@@ -8937,10 +10005,35 @@
         "consigneParent": "Faites le son du serpent : SSSSS. Demandez si ça commence comme 'SABLE', 'SINGE' ou 'TRACTEUR'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "NUAGE",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "SOLEIL",
+              "emoji": "☀️",
+              "syllables": [
+                "SO",
+                "LEIL"
+              ]
+            },
+            {
+              "mot": "PLUIE",
+              "emoji": "🌧️",
+              "syllables": [
+                "PLUIE"
+              ]
+            },
+            {
+              "mot": "NUAGE",
+              "emoji": "☁️",
+              "syllables": [
+                "NUA",
+                "GE"
+              ]
+            }
+          ],
           "rimeWord": "VENT",
-          "themeEmoji": "☀️"
+          "themeEmoji": "☀️",
+          "wordToClap": "NUAGE",
+          "expectedClaps": 2
         }
       }
     ]
@@ -9154,10 +10247,37 @@
         "consigneParent": "Faites scander : PA-PIL-LON. Demandez de trouver d'autres mots avec 3 syllabes (ex. ARROSOIR).",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "FOURMI",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "FOURMI",
+              "emoji": "🐜",
+              "syllables": [
+                "FOUR",
+                "MI"
+              ]
+            },
+            {
+              "mot": "ABEILLE",
+              "emoji": "🐝",
+              "syllables": [
+                "A",
+                "BEIL",
+                "LE"
+              ]
+            },
+            {
+              "mot": "MOUCHE",
+              "emoji": "🪰",
+              "syllables": [
+                "MOU",
+                "CHE"
+              ]
+            }
+          ],
           "rimeWord": "MOUCHE",
-          "themeEmoji": "🐞"
+          "themeEmoji": "🐞",
+          "wordToClap": "FOURMI",
+          "expectedClaps": 2
         }
       }
     ]
@@ -9371,10 +10491,37 @@
         "consigneParent": "Prononcez : TTT-AMBOUR. Entend-on le même son dans 'TRACTEUR' ou dans 'MOUTON' (au début) ?",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "GUITARE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "PIANO",
+              "emoji": "🎹",
+              "syllables": [
+                "PIA",
+                "NO"
+              ]
+            },
+            {
+              "mot": "GUITARE",
+              "emoji": "🎸",
+              "syllables": [
+                "GUI",
+                "TA",
+                "RE"
+              ]
+            },
+            {
+              "mot": "FLUTE",
+              "emoji": "🪈",
+              "syllables": [
+                "FLÛ",
+                "TE"
+              ]
+            }
+          ],
           "rimeWord": "CHANT",
-          "themeEmoji": "🎵"
+          "themeEmoji": "🎵",
+          "wordToClap": "GUITARE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -9588,10 +10735,36 @@
         "consigneParent": "Faites gratter la gorge : RRRR-OND. Comparez avec 'REINE' ou 'ROSE' pour renforcer.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "TRIANGLE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "ROND",
+              "emoji": "🔴",
+              "syllables": [
+                "ROND"
+              ]
+            },
+            {
+              "mot": "CARRE",
+              "emoji": "🟦",
+              "syllables": [
+                "CAR",
+                "RÉ"
+              ]
+            },
+            {
+              "mot": "TRIANGLE",
+              "emoji": "🔺",
+              "syllables": [
+                "TRI",
+                "AN",
+                "GLE"
+              ]
+            }
+          ],
           "rimeWord": "COEUR",
-          "themeEmoji": "🎨"
+          "themeEmoji": "🎨",
+          "wordToClap": "TRIANGLE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -9805,10 +10978,36 @@
         "consigneParent": "Prononcez les mots en insistant sur chaque syllabe. Faites frapper dans les mains : MO-U-TON (2 syllabes réelles à l'oral: MOU-TON).",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "MOUTON",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "VACHE",
+              "emoji": "🐄",
+              "syllables": [
+                "VA",
+                "CHE"
+              ]
+            },
+            {
+              "mot": "POULE",
+              "emoji": "🐔",
+              "syllables": [
+                "POU",
+                "LE"
+              ]
+            },
+            {
+              "mot": "COCHON",
+              "emoji": "🐖",
+              "syllables": [
+                "CO",
+                "CHON"
+              ]
+            }
+          ],
           "rimeWord": "LAPIN",
-          "themeEmoji": "🚜"
+          "themeEmoji": "🚜",
+          "wordToClap": "MOUTON",
+          "expectedClaps": 2
         }
       }
     ]
@@ -10022,10 +11221,36 @@
         "consigneParent": "Demandez à l'enfant d'insister sur le son L: 'LLLL-ION'. Demandez-lui s'il entend ce son dans 'LUNE' ou 'BALLE'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "GIRAFE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "LION",
+              "emoji": "🦁",
+              "syllables": [
+                "LI",
+                "ON"
+              ]
+            },
+            {
+              "mot": "TIGRE",
+              "emoji": "🐯",
+              "syllables": [
+                "TI",
+                "GRE"
+              ]
+            },
+            {
+              "mot": "SINGE",
+              "emoji": "🐒",
+              "syllables": [
+                "SIN",
+                "GE"
+              ]
+            }
+          ],
           "rimeWord": "SINGE",
-          "themeEmoji": "🦁"
+          "themeEmoji": "🦁",
+          "wordToClap": "GIRAFE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -10239,10 +11464,36 @@
         "consigneParent": "Travaillez sur la rime en 'ER'. Proposez: 'FER', 'TERRE', 'CHAIR'. Faites rimer les mots.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "BALEINE",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "POISSON",
+              "emoji": "🐟",
+              "syllables": [
+                "POIS",
+                "SON"
+              ]
+            },
+            {
+              "mot": "CRABE",
+              "emoji": "🦀",
+              "syllables": [
+                "CRA",
+                "BE"
+              ]
+            },
+            {
+              "mot": "REQUIN",
+              "emoji": "🦈",
+              "syllables": [
+                "RE",
+                "QUIN"
+              ]
+            }
+          ],
           "rimeWord": "CRABE",
-          "themeEmoji": "🐟"
+          "themeEmoji": "🐟",
+          "wordToClap": "BALEINE",
+          "expectedClaps": 2
         }
       }
     ]
@@ -10456,10 +11707,36 @@
         "consigneParent": "Prononcez lentement : ÉÉÉ-SCARGOT. Demandez s'il commence comme ÉCOLE, ÉTOILE ou ANANAS.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "ESCARGOT",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "FLEUR",
+              "emoji": "🌻",
+              "syllables": [
+                "FLEUR"
+              ]
+            },
+            {
+              "mot": "ARBRE",
+              "emoji": "🌳",
+              "syllables": [
+                "AR",
+                "BRE"
+              ]
+            },
+            {
+              "mot": "ARROSOIR",
+              "emoji": "🚿",
+              "syllables": [
+                "AR",
+                "RO",
+                "SOIR"
+              ]
+            }
+          ],
           "rimeWord": "FLEUR",
-          "themeEmoji": "🌻"
+          "themeEmoji": "🌻",
+          "wordToClap": "ESCARGOT",
+          "expectedClaps": 3
         }
       }
     ]
@@ -10673,10 +11950,38 @@
         "consigneParent": "Demandez à l'enfant d'exagérer la fin : FRAI-ZZZZ. Est-ce que ça rime avec VALISE, CERISE, CHEMISE ?",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "BANANE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "FRAISE",
+              "emoji": "🍓",
+              "syllables": [
+                "FRAI",
+                "SE"
+              ]
+            },
+            {
+              "mot": "BANANE",
+              "emoji": "🍌",
+              "syllables": [
+                "BA",
+                "NA",
+                "NE"
+              ]
+            },
+            {
+              "mot": "CERISE",
+              "emoji": "🍒",
+              "syllables": [
+                "CE",
+                "RI",
+                "SE"
+              ]
+            }
+          ],
           "rimeWord": "POIRE",
-          "themeEmoji": "🍎"
+          "themeEmoji": "🍎",
+          "wordToClap": "BANANE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -10890,10 +12195,35 @@
         "consigneParent": "Faites vibrer les lèvres : VVVVV-ÉLO. Comparez avec 'BÉBÉ' pour montrer la différence entre le V et le B.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "VOITURE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "TRAIN",
+              "emoji": "🚆",
+              "syllables": [
+                "TRAIN"
+              ]
+            },
+            {
+              "mot": "AVION",
+              "emoji": "✈️",
+              "syllables": [
+                "A",
+                "VION"
+              ]
+            },
+            {
+              "mot": "VELO",
+              "emoji": "🚲",
+              "syllables": [
+                "VÉ",
+                "LO"
+              ]
+            }
+          ],
           "rimeWord": "TRAIN",
-          "themeEmoji": "🚀"
+          "themeEmoji": "🚀",
+          "wordToClap": "VOITURE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -11107,10 +12437,36 @@
         "consigneParent": "Prononcez 'K-K-CLOWN'. Demandez d'autres mots commençant par ce son, comme 'CRABE' ou 'CAROTTE'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "CHAPITEAU",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "CLOWN",
+              "emoji": "🤡",
+              "syllables": [
+                "CLOWN"
+              ]
+            },
+            {
+              "mot": "BALLON",
+              "emoji": "🎈",
+              "syllables": [
+                "BAL",
+                "LON"
+              ]
+            },
+            {
+              "mot": "CHAPITEAU",
+              "emoji": "🎪",
+              "syllables": [
+                "CHA",
+                "PI",
+                "TEAU"
+              ]
+            }
+          ],
           "rimeWord": "BALLON",
-          "themeEmoji": "🎪"
+          "themeEmoji": "🎪",
+          "wordToClap": "CHAPITEAU",
+          "expectedClaps": 3
         }
       }
     ]
@@ -11324,10 +12680,38 @@
         "consigneParent": "Faites scander : LU-NE. C'est idéal pour la conscience phonologique. Demandez si ça rime avec 'DUNE'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "PLANETE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "FUSEE",
+              "emoji": "🚀",
+              "syllables": [
+                "FU",
+                "SÉE"
+              ]
+            },
+            {
+              "mot": "PLANETE",
+              "emoji": "🪐",
+              "syllables": [
+                "PLA",
+                "NÈ",
+                "TE"
+              ]
+            },
+            {
+              "mot": "ETOILE",
+              "emoji": "⭐",
+              "syllables": [
+                "É",
+                "TOI",
+                "LE"
+              ]
+            }
+          ],
           "rimeWord": "LUNE",
-          "themeEmoji": "🚀"
+          "themeEmoji": "🚀",
+          "wordToClap": "PLANETE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -11541,10 +12925,35 @@
         "consigneParent": "Prononcez : DDD-INO. Demandez-lui s'il commence comme 'DOUCHE' ou 'DORLOTER'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "VOLCAN",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "DINO",
+              "emoji": "🦖",
+              "syllables": [
+                "DI",
+                "NO"
+              ]
+            },
+            {
+              "mot": "OEUF",
+              "emoji": "🥚",
+              "syllables": [
+                "OEUF"
+              ]
+            },
+            {
+              "mot": "VOLCAN",
+              "emoji": "🌋",
+              "syllables": [
+                "VOL",
+                "CAN"
+              ]
+            }
+          ],
           "rimeWord": "OEUF",
-          "themeEmoji": "🦖"
+          "themeEmoji": "🦖",
+          "wordToClap": "VOLCAN",
+          "expectedClaps": 2
         }
       }
     ]
@@ -11758,10 +13167,36 @@
         "consigneParent": "Faites taper : CHÂ-TEAU. Demandez s'il entend le son 'O' à la fin du mot.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "COURONNE",
-          "expectedClaps": 3,
+          "words": [
+            {
+              "mot": "CHATEAU",
+              "emoji": "🏰",
+              "syllables": [
+                "CHÂ",
+                "TEAU"
+              ]
+            },
+            {
+              "mot": "PRINCE",
+              "emoji": "🤴",
+              "syllables": [
+                "PRIN",
+                "CE"
+              ]
+            },
+            {
+              "mot": "REINE",
+              "emoji": "👸",
+              "syllables": [
+                "REI",
+                "NE"
+              ]
+            }
+          ],
           "rimeWord": "ROI",
-          "themeEmoji": "👑"
+          "themeEmoji": "👑",
+          "wordToClap": "COURONNE",
+          "expectedClaps": 3
         }
       }
     ]
@@ -11975,10 +13410,34 @@
         "consigneParent": "Faites le son 'MMMMM' avec la bouche fermée. Cherchez ensemble d'autres mots comme 'MAMAN' ou 'MOUTON'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "BOUCHE",
-          "expectedClaps": 1,
+          "words": [
+            {
+              "mot": "TETE",
+              "emoji": "🧑",
+              "syllables": [
+                "TÊ",
+                "TE"
+              ]
+            },
+            {
+              "mot": "BRAS",
+              "emoji": "💪",
+              "syllables": [
+                "BRAS"
+              ]
+            },
+            {
+              "mot": "MAIN",
+              "emoji": "✋",
+              "syllables": [
+                "MAIN"
+              ]
+            }
+          ],
           "rimeWord": "NEZ",
-          "themeEmoji": "👣"
+          "themeEmoji": "👣",
+          "wordToClap": "BOUCHE",
+          "expectedClaps": 1
         }
       }
     ]
@@ -12192,10 +13651,35 @@
         "consigneParent": "Faites le son du serpent : SSSSS. Demandez si ça commence comme 'SABLE', 'SINGE' ou 'TRACTEUR'.",
         "repli": "UN JEU COMPLÈTEMENT SANS ÉCRAN NI IMPRIMANTE ! JUSTE À L'ORAL AVEC PAPA OU MAMAN.",
         "params": {
-          "wordToClap": "NUAGE",
-          "expectedClaps": 2,
+          "words": [
+            {
+              "mot": "SOLEIL",
+              "emoji": "☀️",
+              "syllables": [
+                "SO",
+                "LEIL"
+              ]
+            },
+            {
+              "mot": "PLUIE",
+              "emoji": "🌧️",
+              "syllables": [
+                "PLUIE"
+              ]
+            },
+            {
+              "mot": "NUAGE",
+              "emoji": "☁️",
+              "syllables": [
+                "NUA",
+                "GE"
+              ]
+            }
+          ],
           "rimeWord": "VENT",
-          "themeEmoji": "☀️"
+          "themeEmoji": "☀️",
+          "wordToClap": "NUAGE",
+          "expectedClaps": 2
         }
       }
     ]

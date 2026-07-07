@@ -14,9 +14,10 @@ interface DayViewProps {
   completedAteliers: string[]; // List of completed atelier IDs
   onToggleComplete: (id: string) => void;
   onBack: () => void;
+  autoLaunchType?: string | null; // type d'atelier à ouvrir directement (deep-link aperçu)
 }
 
-export default function DayView({ day, completedAteliers, onToggleComplete, onBack }: DayViewProps) {
+export default function DayView({ day, completedAteliers, onToggleComplete, onBack, autoLaunchType }: DayViewProps) {
   const [activeAtelier, setActiveAtelier] = useState<GeneratedAtelier | null>(null);
   // Fiche à imprimer : un id d'atelier, "all", ou null (rien).
   // Le son ne se déclenche JAMAIS tout seul : uniquement sur action (boutons 🔊).
@@ -48,6 +49,20 @@ export default function DayView({ day, completedAteliers, onToggleComplete, onBa
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [activeAtelier]);
+
+  // Deep-link depuis l'aperçu : ouvre directement l'atelier demandé, ou revient
+  // à la liste si aucun type n'est donné. (Ne se déclenche qu'au changement de
+  // jour/type, donc n'interfère pas avec l'ouverture manuelle d'un atelier.)
+  useEffect(() => {
+    if (autoLaunchType) {
+      const a = day.ateliers.find((x) => x.type === autoLaunchType);
+      if (a) {
+        setActiveAtelier(a);
+        return;
+      }
+    }
+    setActiveAtelier(null);
+  }, [autoLaunchType, day]);
 
   const speakDate = () => {
     const parts = day.date.split("-");
@@ -106,20 +121,27 @@ export default function DayView({ day, completedAteliers, onToggleComplete, onBa
             ◀ QUITTER L'ATELIER ET REVENIR AU PROGRAMME
           </button>
           
-          {activeAtelier.type === "lecture" ? (
-            <LectureGame
-              targetLetter={activeAtelier.params.targetLetter}
-              words={activeAtelier.params.words}
-              letterChoices={activeAtelier.params.letterChoices}
-              onComplete={handleCompleteAtelier}
-            />
-          ) : (
-            <ActivityRenderer
-              activity={activeAtelier}
-              themeEmoji={day.themeEmoji}
-              onComplete={handleCompleteAtelier}
-            />
-          )}
+          {/* Wrapper avec key={activeAtelier.id} : force le remontage quand on
+              change d'atelier (ActivityRenderer utilise des hooks conditionnels
+              par type → un changement de type sans remontage provoquerait
+              l'erreur React #310, possible via un deep-link d'un atelier à un
+              autre). */}
+          <div key={activeAtelier.id}>
+            {activeAtelier.type === "lecture" ? (
+              <LectureGame
+                targetLetter={activeAtelier.params.targetLetter}
+                words={activeAtelier.params.words}
+                letterChoices={activeAtelier.params.letterChoices}
+                onComplete={handleCompleteAtelier}
+              />
+            ) : (
+              <ActivityRenderer
+                activity={activeAtelier}
+                themeEmoji={day.themeEmoji}
+                onComplete={handleCompleteAtelier}
+              />
+            )}
+          </div>
         </div>
       ) : (
         <div className="no-print">
