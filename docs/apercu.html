@@ -33,6 +33,7 @@
     .chip{display:flex;align-items:center;gap:8px;background:var(--creme);border-radius:12px;padding:7px 10px;margin-top:6px;font-size:.92rem}
     .chip .n{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--turq);color:#fff;font-weight:900;font-size:.78rem;display:flex;align-items:center;justify-content:center}
     .chip .ti{flex:1;font-weight:800}
+    .chip .prm{display:block;font-size:.7rem;color:var(--doux);font-style:italic;font-weight:600;margin-top:1px}
     .chip .mode{font-size:.62rem;font-weight:800;padding:2px 8px;border-radius:999px;white-space:nowrap}
     .m-ecran{background:#EAF9F0;color:#1E9C6B}
     .m-imp{background:#E8F4FF;color:#2E6FB0}
@@ -56,6 +57,21 @@
     const MOIS = ["JANVIER","FÉVRIER","MARS","AVRIL","MAI","JUIN","JUILLET","AOÛT","SEPTEMBRE","OCTOBRE","NOVEMBRE","DÉCEMBRE"];
     const EM = {programme:"📅",lecture:"📖",graphisme:"✏️",relier:"🔗",decoupage:"✂️",numeration:"🔢",logique:"🧩",phono:"👂"};
     function modeCls(m){ if(m.includes("IMPRIMER"))return "m-imp"; if(m.includes("SANS"))return "m-sans"; return "m-ecran"; }
+    // Résumé des paramètres (mode debug) : permet de vérifier la variété.
+    function pSum(a){
+      const p=a.params||{};
+      switch(a.type){
+        case "graphisme": return "tracé : "+(p.pathType||"?");
+        case "numeration": return "jusqu'à "+p.max+" · à compter : "+p.count;
+        case "relier": return (p.pairs?p.pairs.length:"?")+" paires";
+        case "logique": return "suite : "+((p.pattern||[]).join(" "))+" → "+(p.correctAnswer||"?");
+        case "decoupage": return "ligne : "+(p.lineType||"?");
+        case "lecture": return "lettre : "+(p.targetLetter||"?");
+        case "phono": return (p.expectedClaps||"?")+" syllabes ("+(p.wordToClap||"")+")";
+        case "programme": return ((p.steps||[]).length)+" étapes";
+        default: return "";
+      }
+    }
     function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
     const todayISO=(()=>{const d=new Date();const p=n=>String(n).padStart(2,"0");return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`;})();
     fetch("days.json").then(r=>r.json()).then(days=>{
@@ -75,7 +91,8 @@
         let chips="";
         d.ateliers.forEach((a,i)=>{
           chips+=`<div class="chip"><span class="n">${i+1}</span><span style="font-size:1.3rem">${EM[a.type]||"•"}</span>`+
-            `<span class="ti">${esc(a.titre)}</span><span class="mode ${modeCls(a.mode)}">${esc(a.mode)}</span></div>`;
+            `<span class="ti">${esc(a.titre)}<span class="prm">${esc(pSum(a))}</span></span>`+
+            `<span class="mode ${modeCls(a.mode)}">${esc(a.mode)}</span></div>`;
         });
         html+=`<div class="jour ${auj?"auj":""}" id="${d.date}">
           <div class="head"><span class="date">${auj?"⭐ ":""}${dateTxt}</span>

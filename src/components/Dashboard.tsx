@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Calendar as CalendarIcon, Clock, Plus, Trash2, Printer, Star, Heart } from "lucide-react";
 import { DayData } from "../data/days.ts";
 
@@ -29,6 +29,20 @@ export default function Dashboard({
   const [selectedEventDate, setSelectedEventDate] = useState<string | null>(null);
   const [eventEmoji, setEventEmoji] = useState("🏖️");
   const [eventText, setEventText] = useState("");
+
+  // Quand on imprime depuis le tableau de bord (bouton ou Ctrl+P), on n'imprime
+  // QUE le calendrier mural dédié (#calendar-print-area), pas toute la page.
+  useEffect(() => {
+    const before = () => document.body.classList.add("printing-calendar");
+    const after = () => document.body.classList.remove("printing-calendar");
+    window.addEventListener("beforeprint", before);
+    window.addEventListener("afterprint", after);
+    return () => {
+      window.removeEventListener("beforeprint", before);
+      window.removeEventListener("afterprint", after);
+      document.body.classList.remove("printing-calendar");
+    };
+  }, []);
 
   const rentreeDate = new Date("2026-09-01T00:00:00");
   const today = new Date(currentDateStr);
@@ -75,6 +89,51 @@ export default function Dashboard({
 
   const julyGrid = getDaysInMonthGrid(2026, 6); // index 6 is July
   const augustGrid = getDaysInMonthGrid(2026, 7); // index 7 is August
+
+  // Découpe la grille en semaines de 7 (complétées en fin de mois).
+  const weekChunks = (grid: (DayData | null)[]) => {
+    const padded = [...grid];
+    while (padded.length % 7 !== 0) padded.push(null);
+    const weeks: (DayData | null)[][] = [];
+    for (let i = 0; i < padded.length; i += 7) weeks.push(padded.slice(i, i + 7));
+    return weeks;
+  };
+
+  // Calendrier mural imprimable : cases A4 avec numéro + événements pré-imprimés,
+  // assez grandes pour écrire/cocher à la main.
+  const renderPrintMonth = (grid: (DayData | null)[], title: string) => (
+    <div className="cal-print-month">
+      <h1 className="cal-print-h">🗓️ {title} 2026</h1>
+      <table className="cal-print-table">
+        <thead>
+          <tr>
+            {["LUN", "MAR", "MER", "JEU", "VEN", "SAM", "DIM"].map((w) => (
+              <th key={w}>{w}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {weekChunks(grid).map((week, wi) => (
+            <tr key={wi}>
+              {week.map((day, di) => {
+                if (!day) return <td key={di} className="off" />;
+                const num = parseInt(day.date.split("-")[2]);
+                const evts = events[day.date] || [];
+                return (
+                  <td key={di}>
+                    <span className="n">{num}</span>
+                    {evts.map((e, ei) => (
+                      <span key={ei} className="e">{e.emoji} {e.texte}</span>
+                    ))}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 
   const handleOpenEventModal = (e: React.MouseEvent, date: string) => {
     e.stopPropagation(); // prevent opening the day view
@@ -255,6 +314,12 @@ export default function Dashboard({
             🐌 TRACE, RECOPIE ET JOUE SUR L'ÉCRAN !
           </div>
         </div>
+      </div>
+
+      {/* Calendrier mural imprimable (masqué à l'écran, visible à l'impression) */}
+      <div id="calendar-print-area">
+        {renderPrintMonth(julyGrid, "JUILLET")}
+        {renderPrintMonth(augustGrid, "AOÛT")}
       </div>
 
       {/* 4. Event Editing Popup (no-print) */}

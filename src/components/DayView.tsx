@@ -18,18 +18,31 @@ interface DayViewProps {
 
 export default function DayView({ day, completedAteliers, onToggleComplete, onBack }: DayViewProps) {
   const [activeAtelier, setActiveAtelier] = useState<GeneratedAtelier | null>(null);
+  // Fiche à imprimer : un id d'atelier, "all", ou null (rien).
+  // Le son ne se déclenche JAMAIS tout seul : uniquement sur action (boutons 🔊).
+  const [printId, setPrintId] = useState<string | "all" | null>(null);
 
-  // Auto-play the date ritual upon loading today's day view
+  // Lance l'impression une fois que la bonne fiche est rendue, puis réinitialise.
+  // On active body.printing-fiche pendant toute l'impression pour ne montrer QUE
+  // la fiche (le CSS d'impression est sinon inactif → Ctrl+P normal fonctionne).
   useEffect(() => {
-    // Format the date nicely in French for TTS
-    const parts = day.date.split("-");
-    const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
-    const dayName = d.toLocaleDateString("fr-FR", { weekday: "long" }).toUpperCase();
-    const dayNum = d.getDate();
-    const monthName = d.toLocaleDateString("fr-FR", { month: "long" }).toUpperCase();
-    
-    speak(`AUJOURD'HUI, C'EST ${dayName} ${dayNum} ${monthName} ! BONJOUR ! PRÊT POUR LE PROGRAMME DE LA JOURNÉE ?`);
-  }, [day.date]);
+    if (!printId) return;
+    document.body.classList.add("printing-fiche");
+    const cleanup = () => {
+      document.body.classList.remove("printing-fiche");
+      window.removeEventListener("afterprint", cleanup);
+      setPrintId(null);
+    };
+    window.addEventListener("afterprint", cleanup);
+    const t = setTimeout(() => {
+      try { window.print(); } catch (e) { console.warn("Print failed", e); }
+    }, 80);
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("afterprint", cleanup);
+      document.body.classList.remove("printing-fiche");
+    };
+  }, [printId]);
 
   const speakDate = () => {
     const parts = day.date.split("-");
@@ -41,11 +54,7 @@ export default function DayView({ day, completedAteliers, onToggleComplete, onBa
   };
 
   const printAtelier = (atelierId: string) => {
-    try {
-      window.print();
-    } catch (e) {
-      console.warn("Print failed", e);
-    }
+    setPrintId(atelierId);
   };
 
   const handleLaunchAtelier = (atelier: GeneratedAtelier) => {
@@ -182,15 +191,13 @@ export default function DayView({ day, completedAteliers, onToggleComplete, onBa
                         <Play className="w-3.5 h-3.5" /> JOUER SUR L'ÉCRAN
                       </button>
                       
-                      {atelier.mode === "🖨️ À IMPRIMER" && (
-                        <button
-                          onClick={() => printAtelier(atelier.id)}
-                          className="flex items-center justify-center bg-neutral-100 hover:bg-neutral-200 text-neutral-700 font-bold p-2.5 rounded-xl text-xs transition border border-neutral-200 cursor-pointer"
-                          title="Imprimer cette fiche"
-                        >
-                          <Printer className="w-4 h-4" />
-                        </button>
-                      )}
+                      <button
+                        onClick={() => printAtelier(atelier.id)}
+                        className="flex items-center justify-center bg-neutral-100 hover:bg-neutral-200 text-neutral-700 font-bold p-2.5 rounded-xl text-xs transition border border-neutral-200 cursor-pointer"
+                        title="Imprimer seulement cette fiche"
+                      >
+                        <Printer className="w-4 h-4" />
+                      </button>
                     </div>
                   </div>
                 );
@@ -231,16 +238,10 @@ export default function DayView({ day, completedAteliers, onToggleComplete, onBa
                   IMPRIMEZ TOUTES LES FICHES DU THÈME POUR APPRENDRE SUR TABLE !
                 </p>
                 <button
-                  onClick={() => {
-                    try {
-                      window.print();
-                    } catch (e) {
-                      console.warn("Print error", e);
-                    }
-                  }}
+                  onClick={() => setPrintId("all")}
                   className="w-full flex items-center justify-center gap-2 bg-neutral-800 hover:bg-black text-white font-bold py-3.5 px-6 rounded-2xl text-xs transition shadow cursor-pointer uppercase mb-3"
                 >
-                  <Printer className="w-4 h-4" /> IMPRIMER LES ACTIVITÉS DU JOUR
+                  <Printer className="w-4 h-4" /> IMPRIMER TOUT LE PROGRAMME
                 </button>
                 <p className="text-[10px] font-mono font-bold text-neutral-400 uppercase leading-snug">
                   💡 TABLETTE : OUVRIR EN PLEIN ÉCRAN (ICÔNE ↗️ EN HAUT) POUR IMPRIMER.
@@ -252,9 +253,9 @@ export default function DayView({ day, completedAteliers, onToggleComplete, onBa
         </div>
       )}
 
-      {/* Hidden printable versions of ALL ateliers of this day */}
-      <div className="hidden print:block">
-        {day.ateliers.map((atelier) => (
+      {/* Zone d'impression : uniquement la (les) fiche(s) demandée(s). */}
+      <div id="print-area">
+        {(printId === "all" ? day.ateliers : day.ateliers.filter((a) => a.id === printId)).map((atelier) => (
           <div key={atelier.id} className="print-container">
             <div className="border-8 border-double border-neutral-300 p-8 m-4 rounded-3xl min-h-[29cm] flex flex-col justify-between bg-white">
               <div>

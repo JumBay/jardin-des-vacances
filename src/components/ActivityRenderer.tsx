@@ -124,23 +124,21 @@ function InteractiveContentRenderer({ type, params, themeEmoji, onComplete }: { 
     const [isDrawing, setIsDrawing] = useState(false);
     const [brushColor, setBrushColor] = useState("#FF6B6B");
 
-    useEffect(() => {
+    const drawGuide = () => {
       const canvas = canvasRef.current;
       if (!canvas) return;
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
-      
-      // Clear canvas
+
+      // (Re)dessine le modèle en pointillés bien visibles
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Draw tracing templates in grey
-      ctx.strokeStyle = "#e5e5e5";
-      ctx.lineWidth = 4;
+      ctx.strokeStyle = "#9aa0a6";
+      ctx.lineWidth = 5;
       ctx.setLineDash([8, 8]);
-      
+
       const width = canvas.width;
       const height = canvas.height;
-      
+
       if (params.pathType === "horizontal") {
         ctx.beginPath();
         ctx.moveTo(30, height / 2);
@@ -210,7 +208,8 @@ function InteractiveContentRenderer({ type, params, themeEmoji, onComplete }: { 
         ctx.lineTo(width - 40, 30);
         ctx.stroke();
       }
-    }, [params]);
+    };
+    useEffect(() => { drawGuide(); }, [params]);
 
     const startDrawing = (e: React.MouseEvent<HTMLCanvasElement> | React.TouchEvent<HTMLCanvasElement>) => {
       setIsDrawing(true);
@@ -270,9 +269,7 @@ function InteractiveContentRenderer({ type, params, themeEmoji, onComplete }: { 
       if (!canvas) return;
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // Re-trigger layout draw by slightly toggling a state or simply forcing reload
-      setBrushColor(c => c);
+      drawGuide(); // efface le tracé de l'enfant mais garde le modèle en pointillés
     };
 
     return (
