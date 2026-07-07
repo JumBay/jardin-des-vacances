@@ -11,7 +11,12 @@ import { Sparkles, Star, Trophy, RefreshCw, Music, Heart, Volume2, VolumeX, Help
 import { speak, registerSpeakListener } from "./components/LectureGame.tsx";
 
 export default function App() {
-  const currentDateStr = "2026-07-06"; // Static reference current date
+  // Vraie date du jour (locale, pas UTC → évite le décalage d'un jour).
+  const currentDateStr = (() => {
+    const d = new Date();
+    const p = (n: number) => String(n).padStart(2, "0");
+    return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+  })();
   const [selectedDay, setSelectedDay] = useState<DayData | null>(null);
   
   // Initialize state with LocalStorage for robust persistence
