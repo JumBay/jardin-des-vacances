@@ -95,6 +95,12 @@ export default function App() {
     }
   }, [events]);
 
+  // À chaque changement de vue (ouvrir un jour / revenir au calendrier),
+  // on remonte en haut de la page.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [selectedDay]);
+
   const handleToggleComplete = (id: string) => {
     const isCompleted = completedAteliers.includes(id);
     let updated: string[];

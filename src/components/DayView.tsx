@@ -44,6 +44,11 @@ export default function DayView({ day, completedAteliers, onToggleComplete, onBa
     };
   }, [printId]);
 
+  // Remonte en haut quand on ouvre un atelier ou qu'on revient au programme.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeAtelier]);
+
   const speakDate = () => {
     const parts = day.date.split("-");
     const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
